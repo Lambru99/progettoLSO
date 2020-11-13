@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tommy/Documents/CLion Workspace/playfair/main.c
+stdio.h
+-
+stdio.h
+-
+conio.h
+-
+string.h
+-
+ctype.h
+-
+
