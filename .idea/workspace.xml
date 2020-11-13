@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="playfair" targetName="playfair" />
+      <config projectName="progettoLSO" targetName="progettoLSO" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0cd8b75-a33f-428f-80d1-5a78b498d8be" name="Default Changelist" comment="" />
+    <list default="true" id="552e70e5-593c-4bb6-bea7-1be3cc246a49" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +21,10 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="ProjectId" id="1kF90t7i2k68TGnTuRdr9PNNCun" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kFOPcXhrwN1JmI0Ayo7FxUAHHY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,7 +36,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
-    <configuration name="playfair" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="playfair" TARGET_NAME="playfair" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="playfair" RUN_TARGET_NAME="playfair">
+    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -44,34 +47,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e0cd8b75-a33f-428f-80d1-5a78b498d8be" name="Default Changelist" comment="" />
-      <created>1605285254008</created>
+      <changelist id="552e70e5-593c-4bb6-bea7-1be3cc246a49" name="Default Changelist" comment="" />
+      <created>1605292850281</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605285254008</updated>
-      <workItem from="1605285261216" duration="4355000" />
+      <updated>1605292850281</updated>
+      <workItem from="1605292853115" duration="91000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605292362985">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605292362985" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605292362984">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605292362984" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605292362984">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605292362984" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605292362985">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605292362985" />
   </component>
 </project>

@@ -47,24 +47,13 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Tommy\Documents\CLion Workspace\playfair"
+CMAKE_SOURCE_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Tommy\Documents\CLion Workspace\playfair\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,11 +66,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\playfair\cmake-build-debug\CMakeFiles" "C:\Users\Tommy\Documents\CLion Workspace\playfair\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\playfair\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named playfair
+# Target rules for targets named progettoLSO
 
 # Build rule for target.
-playfair: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 playfair
-.PHONY : playfair
+progettoLSO: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 progettoLSO
+.PHONY : progettoLSO
 
 # fast build rule for target.
-playfair/fast:
-	$(MAKE) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/build
-.PHONY : playfair/fast
+progettoLSO/fast:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/build
+.PHONY : progettoLSO/fast
 
 main.obj: main.c.obj
 
@@ -128,7 +128,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/main.c.obj
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -137,7 +137,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/main.c.i
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -146,7 +146,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles\playfair.dir\build.make CMakeFiles/playfair.dir/main.c.s
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -155,9 +155,9 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... playfair
-	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... progettoLSO
+	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
