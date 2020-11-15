@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c">
 			<Option target="progettoLSO"/>
 		</Unit>

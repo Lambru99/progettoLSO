@@ -122,6 +122,33 @@ progettoLSO/fast:
 	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/build
 .PHONY : progettoLSO/fast
 
+fileReader.obj: fileReader.c.obj
+
+.PHONY : fileReader.obj
+
+# target to build an object file
+fileReader.c.obj:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileReader.c.obj
+.PHONY : fileReader.c.obj
+
+fileReader.i: fileReader.c.i
+
+.PHONY : fileReader.i
+
+# target to preprocess a source file
+fileReader.c.i:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileReader.c.i
+.PHONY : fileReader.c.i
+
+fileReader.s: fileReader.c.s
+
+.PHONY : fileReader.s
+
+# target to generate assembly for a file
+fileReader.c.s:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileReader.c.s
+.PHONY : fileReader.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... progettoLSO
 	@echo ... edit_cache
+	@echo ... fileReader.obj
+	@echo ... fileReader.i
+	@echo ... fileReader.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
