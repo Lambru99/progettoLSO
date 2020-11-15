@@ -36,7 +36,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
-    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
+    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
