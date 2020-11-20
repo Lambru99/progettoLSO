@@ -33,10 +33,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
-    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
+    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -54,6 +55,9 @@
       <updated>1605292850281</updated>
       <workItem from="1605292853115" duration="91000" />
       <workItem from="1605433071800" duration="9777000" />
+      <workItem from="1605610720642" duration="89000" />
+      <workItem from="1605610840837" duration="1275000" />
+      <workItem from="1605865503760" duration="22385000" />
     </task>
     <servers />
   </component>
@@ -61,21 +65,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1605443132479">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1605906316558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605443132479" />
-    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1605443132479">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1605906316558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605443132479" />
-    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1605443132479">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1605906316558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605443132479" />
-    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1605443132479">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1605906316558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605443132479" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
   </component>
 </project>

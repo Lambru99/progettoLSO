@@ -3,6 +3,11 @@
 
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../fileReader.c
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../fileReader.h
+CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../playfair.h
 
+CMakeFiles/progettoLSO.dir/main.c.obj: ../fileReader.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../main.c
+
+CMakeFiles/progettoLSO.dir/playfair.c.obj: ../playfair.c
+CMakeFiles/progettoLSO.dir/playfair.c.obj: ../playfair.h
 

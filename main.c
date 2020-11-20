@@ -1,3 +1,4 @@
+#include "fileReader.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -58,17 +59,17 @@ void encrypt(char a, char b) {
     j = j + 2;
 }
 
-void controllaAccentate(char *pch) {
-    if (*pch == 130 || *pch == 138 || *pch == 144 || *pch == 212)
-        *pch = 'E';
-    if (*pch == 133 || *pch == 183)
-        *pch = 'A';
-    if (*pch == 141 || *pch == 222)
-        *pch = 'I';
-    if (*pch == 149 || *pch == 227)
-        *pch = 'O';
-    if (*pch == 235 || *pch == 151)
-        *pch = 'U';
+void controllaAccentate(char ch) {
+    if (ch == 233 || ch == 232 || ch == 201 || ch == 200)
+        ch = 69;
+    if (ch == 224 || ch == 192)
+        ch = 65;
+    if (ch == 236 || ch == 204)
+        ch = 73;
+    if (ch == 242 || ch == 210)
+        ch = 79;
+    if (ch == 217 || ch == 219)
+        ch = 85;
 }
 
 void readkey() {
@@ -77,18 +78,6 @@ void readkey() {
 
     while (!feof(kp)) {
         ch = getc(kp);
-//        char *pch = &ch;
-
-        if (ch == 233 || ch == 232 || ch == 201 || ch == 200)
-            ch = 69;
-        if (ch == 224 || ch == 192)
-            ch = 65;
-        if (ch == 236 || ch == 204)
-            ch = 73;
-        if (ch == 242 || ch == 210)
-            ch = 79;
-        if (ch == 217 || ch == 219)
-            ch = 85;
 
         if (ch >= 97 && ch <= 122)
             key[i++] = ch - 32;
@@ -187,7 +176,7 @@ void readfile() {
     }
 }
 
-void padinput() {
+void controllaDigrafiDispari() {
     fseek(in, 0, SEEK_END);
     int size = ftell(in);
 
@@ -197,30 +186,33 @@ void padinput() {
 }
 
 int main() {
-    // Use plain text "HIDE THE GOLD IN THE TREE STUMP"
-    in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
-    if (in == NULL) {
-        printf("Error while opening the file.\n");
-        exit(1);
-    }
+//    // Use plain text "HIDE THE GOLD IN THE TREE STUMP"
+//    in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
+//    if (in == NULL) {
+//        printf("Error while opening the file.\n");
+//        exit(1);
+//    }
+//
+//    // Use "playfair example" as the key to encrypt the message
+//    kp = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\key.txt", "r");
+//    if (kp == NULL) {
+//        printf("Error while opening the file.\n");
+//        exit(1);
+//    }
+//
+//    controllaDigrafiDispari();
+//    readkey();
+//    readfile();
+//
+//    while (j != count) {
+//        if (arr[j + 1] != '\0')
+//            encrypt(arr[j], arr[j + 1]);
+//    }
+//
+//    fclose(in);
 
-    // Use "playfair example" as the key to encrypt the message
-    kp = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\key.txt", "r");
-    if (kp == NULL) {
-        printf("Error while opening the file.\n");
-        exit(1);
-    }
-
-    padinput();
-    readkey();
-    readfile();
-
-    while (j != count) {
-        if (arr[j + 1] != '\0')
-            encrypt(arr[j], arr[j + 1]);
-    }
-
-    fclose(in);
+    readKeyFile();
+//    readText();
 
     return 0;
 }

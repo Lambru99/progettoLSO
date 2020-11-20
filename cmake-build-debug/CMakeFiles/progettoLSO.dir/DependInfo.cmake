@@ -6,11 +6,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/fileReader.c.obj"
   "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.obj"
+  "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/playfair.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.

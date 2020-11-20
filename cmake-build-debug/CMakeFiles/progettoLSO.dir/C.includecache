@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c
+fileReader.h
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h
+playfair.h
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
+stdlib.h
+-
 stdio.h
 -
 string.h
 -
-stdlib.h
+
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h
+stdio.h
 -
-ctype.h
--
+
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
 

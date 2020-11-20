@@ -1,6 +1,16 @@
 cmake_minimum_required(VERSION 3.15)
-project(progettoLSO C)
+project(progettoLSO)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(progettoLSO main.c fileReader.c fileReader.h)
+include_directories(.)
+
+add_executable(progettoLSO
+        ascii_lettere_accentate.txt
+        fileReader.c
+        fileReader.h
+        key.txt
+        LICENSE
+        link_utili.txt
+        main.c
+        prova.txt playfair.c playfair.h)
