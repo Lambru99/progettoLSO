@@ -74,6 +74,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/main.c">
 			<Option target="progettoLSO"/>
 		</Unit>
