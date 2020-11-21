@@ -1,4 +1,4 @@
-
+#include "playfair.h"
 #include <stdio.h>
 
 #ifndef PROGETTOLSO_FILEREADER_H
@@ -6,6 +6,6 @@
 
 #endif //PROGETTOLSO_FILEREADER_H
 
-void readKeyFile();
+struct KeyFile readKeyFile();
 
-void readText();
+char * readMessage();

@@ -10,3 +10,5 @@ struct KeyFile {
     char specialCharacter;
     char *key;
 };
+
+void buildMatrix(struct KeyFile);

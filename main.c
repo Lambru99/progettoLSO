@@ -211,8 +211,10 @@ int main() {
 //
 //    fclose(in);
 
-    readKeyFile();
-//    readText();
+
+//    readMessage();
+    buildMatrix(readKeyFile());
+
 
     return 0;
 }
