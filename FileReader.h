@@ -7,6 +7,16 @@
 
 #include "KeyStruct.h"
 
-void readFile(char *);
+long getFileSize(FILE *);
+
+int countFileLines(FILE *);
+
+char *loadFile(char *);
+
+FILE *openFile(char *);
+
+Key getKeyFile(char *);
+
+char *readMessageFile(char *);
 
 #endif //PROGETTOLSO_FILEREADER_H

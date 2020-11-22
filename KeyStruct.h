@@ -5,11 +5,11 @@
 #ifndef PROGETTOLSO_KEYSTRUCT_H
 #define PROGETTOLSO_KEYSTRUCT_H
 
-typedef struct{
-    char alphabet[25];
+typedef struct {
+    char *alphabet;
     char missingChar;
     char specialChar;
     char *key;
-}Key;
+} Key;
 
 #endif //PROGETTOLSO_KEYSTRUCT_H

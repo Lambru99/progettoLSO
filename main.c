@@ -1,6 +1,10 @@
+#include <stdlib.h>
 #include <stdio.h>
 
+#include "PlayfairCipher.h"
+
 int main() {
-    printf("Hello, World!\n");
+    initializeCipher("C:\\Users\\Paolo\\CLionProjects\\progettoLSO\\Files\\TextFolder\\Text1.txt");
+
     return 0;
 }

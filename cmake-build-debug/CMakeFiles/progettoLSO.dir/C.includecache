@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
+KeyStruct.h
+C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.c
+stdio.h
+-
+PlayfairCipher.h
+C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
+FileReader.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
+KeyStruct.h
+C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+
