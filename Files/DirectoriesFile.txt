@@ -1,1 +1,5 @@
-C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text1
+C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text1.txt
+C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text2.txt
+C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text3.txt
+C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text4.txt
+C:\Users\Paolo\CLionProjects\progettoLSO\Files\TextFolder\Text5.txt

@@ -6,8 +6,9 @@
 #define PROGETTOLSO_FILEREADER_H
 
 #include "KeyStruct.h"
+#include "DirList.h"
 
-long getFileSize(FILE *);
+int getFileSize(FILE *);
 
 int countFileLines(FILE *);
 
@@ -15,8 +16,8 @@ char *loadFile(char *);
 
 FILE *openFile(char *);
 
-Key getKeyFile(char *);
+Key getKeyInfo(char *);
 
-char *readMessageFile(char *);
+DirList getDirectoriesFileList(char *);
 
 #endif //PROGETTOLSO_FILEREADER_H

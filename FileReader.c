@@ -1,6 +1,7 @@
 //
 // Created by Paolo on 15/11/2020.
 //
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,8 +21,8 @@ FILE *openFile(char *filePath) {
     return fReader;
 }
 
-long getFileSize(FILE *file) {
-    long int size;
+int getFileSize(FILE *file) {
+    int size;
 
     fseek(file, 0, SEEK_END);
     size = ftell(file);
@@ -47,7 +48,27 @@ int countFileLines(FILE *file) {
     return lines;
 }
 
-Key getKeyFile(char *filePath) {
+int countCharLine(FILE *file) {
+    int count = 0;
+    int currentChar;
+    fpos_t pos;
+
+    fgetpos(file, &pos);
+
+    while (1) {
+        currentChar = getc(file);
+        if (currentChar != '\n' && currentChar != EOF)
+            count++;
+        else
+            break;
+    }
+
+    fsetpos(file, &pos);
+
+    return count;
+}
+
+Key getKeyInfo(char *filePath) {
     Key key;
     FILE *fReader;
     int fileSize;
@@ -65,6 +86,7 @@ Key getKeyFile(char *filePath) {
         fprintf(stderr, "Errore!\nNon è possibile allocare memoria.");
         exit(EXIT_FAILURE);
     }
+
     fgets(key.alphabet, 26, fReader);
     do {
         currentChar = fgetc(fReader);
@@ -86,6 +108,26 @@ Key getKeyFile(char *filePath) {
     return key;
 }
 
-//char *readMessageFile(char *filePath) {
-//
-//}
+DirList getDirectoriesFileList(char *filePath) {
+    DirList dirList;
+    FILE *dirReader;
+    char *currentDir;
+    int currentDirSize;
+
+    initList(&dirList);
+    dirReader = openFile(filePath);
+
+    while (1) {
+        currentDirSize = countCharLine(dirReader);
+        if (currentDirSize != 0) {
+            currentDir = malloc(sizeof(char) * currentDirSize);
+            fscanf(dirReader, "%s\n", currentDir);
+            addElement(&dirList, currentDir);
+        } else
+            break;
+    }
+
+    fclose(dirReader);
+
+    return dirList;
+}

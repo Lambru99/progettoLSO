@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/Paolo/CLionProjects/progettoLSO/DirList.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/DirList.c.obj"
   "C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/FileReader.c.obj"
   "C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj"
   "C:/Users/Paolo/CLionProjects/progettoLSO/main.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.obj"
