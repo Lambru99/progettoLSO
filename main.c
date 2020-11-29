@@ -1,220 +1,160 @@
-#include "fileReader.h"
 #include <stdio.h>
+#include <conio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include "fileReader.h"
 
-FILE *in, *kp;
-char input[100];
-unsigned char key[50];
-char matrix[5][5];
-char arr[100];
-int j = 0;
-int count = 0;
+#define MX 5
+int choice;
 
-void encrypt(char a, char b) {
-    static int i = 0;
-    arr[i] = a;
-    arr[i + 1] = b;
-    char c;
-    if (a == b) {
-        c = b;
-        arr[i + 1] = 'X';
-        arr[i + 2] = c;
-    }
-
-    int p, q, r, s;
-    for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
-            if (arr[j] == matrix[x][y]) {
-                p = x;
-                q = y;
+void playfair(char ch1, char ch2, char key[MX][MX]) {
+    int i, j, w, x, y, z;
+    for (i = 0; i < MX; i++) {
+        for (j = 0; j < MX; j++) {
+            if (ch1 == key[i][j]) {
+                w = i;
+                x = j;
+            } else if (ch2 == key[i][j]) {
+                y = i;
+                z = j;
             }
         }
     }
-
-    for (int u = 0; u < 5; u++) {
-        for (int t = 0; t < 5; t++) {
-            if (arr[j + 1] == matrix[u][t]) {
-                r = u;
-                s = t;
-            }
+    //printf("%d%d %d%d",w,x,y,z);
+    if (w == y) {
+        if (choice == 1) {
+            x = (x + 1) % 5;
+            z = (z + 1) % 5;
+        } else {
+            x = ((x - 1) % 5 + 5) % 5;
+            z = ((z - 1) % 5 + 5) % 5;
         }
-    }
-
-    if (q == s)
-        printf("%c %c -> %c %c", a, b, matrix[(p + 1) % 5][q],
-               matrix[(r + 1) % 5][q]);
-    else if (p == r)
-        printf("%c %c -> %c %c", a, b, matrix[p][(q + 1) % 5],
-               matrix[p][(s + 1) % 5]);
-    else
-        printf("%c %c -> %c %c", a, b, matrix[p][s], matrix[r][q]);
-
-    if (a == b)
-        i = i + 3;
-    else
-        i = i + 2;
-
-    j = j + 2;
-}
-
-void controllaAccentate(char ch) {
-    if (ch == 233 || ch == 232 || ch == 201 || ch == 200)
-        ch = 69;
-    if (ch == 224 || ch == 192)
-        ch = 65;
-    if (ch == 236 || ch == 204)
-        ch = 73;
-    if (ch == 242 || ch == 210)
-        ch = 79;
-    if (ch == 217 || ch == 219)
-        ch = 85;
-}
-
-void readkey() {
-    int i = 0;
-    unsigned char ch;
-
-    while (!feof(kp)) {
-        ch = getc(kp);
-
-        if (ch >= 97 && ch <= 122)
-            key[i++] = ch - 32;
-        else key[i++] = ch;
-    }
-
-    printf("\n");
-    for (int k = 0; k < i; k++) {
-        printf("%c", key[k]);
-    }
-    printf("\n");
-
-    int k = 0;
-    char inp[26];
-    int flag[26] = {0};
-    int index = 0;
-    int x = strlen(key) - 1;
-
-    while (x) {
-        if (key[k] != ' ') {
-            if (flag[key[k] - 65] != 1) {
-                inp[index] = key[k];
-                index++;
-                flag[key[k] - 65] = 1;
-            }
+        printf("%c%c", key[w][x], key[y][z]);
+    } else if (x == z) {
+        if (choice == 1) {
+            w = (w + 1) % 5;
+            y = (y + 1) % 5;
+        } else {
+            w = ((w - 1) % 5 + 5) % 5;
+            y = ((y - 1) % 5 + 5) % 5;
         }
-        k++;
-        x--;
-    }
-
-    for (int t = 0; t < 26; t++) {
-        if (flag[t] != 1) {
-            flag[t] = 1;
-            if ((t + 65) != 'J') {
-                inp[index] = t + 65;
-                index++;
-            }
-        }
-    }
-
-    k = 0;
-    printf("\n");
-
-    for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
-            matrix[x][y] = inp[k++];
-            printf("%c ", matrix[x][y]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-}
-
-void readfile() {
-    char ch;
-    int k, i, n;
-    int size;
-    size = ftell(in);
-    rewind(in);
-    char a, b;
-
-    k = size / 2;
-    n = k;
-    int result;
-    char *ptr;
-
-    while (k) {
-        ptr = (char *) malloc(sizeof(char) * 2);
-        if (ptr == NULL) {
-            fputs("Memory Error", stderr);
-            exit(2);
-        }
-
-        result = fread(ptr, 1, 2, in);
-        if (result != 2) {
-            exit(3);
-        }
-
-        a = (*ptr);
-        b = *(ptr + 1);
-
-        while (a == ' ') {
-            a = b;
-            b = getc(in);
-        }
-
-        while (b == ' ') {
-            b = getc(in);
-        }
-
-        encrypt(a, b);
-        printf("\n");
-        count = count + 2;
-        free(ptr);
-        k--;
+        printf("%c%c", key[w][x], key[y][z]);
+    } else {
+        printf("%c%c", key[w][z], key[y][x]);
     }
 }
 
-void controllaDigrafiDispari() {
-    fseek(in, 0, SEEK_END);
-    int size = ftell(in);
+void removeDuplicates(char str[]) {
+    int hash[256] = {0};
+    int currentIndex = 0;
+    int lastUniqueIndex = 0;
+    while (*(str + currentIndex)) {
+        char temp = *(str + currentIndex);
+        if (0 == hash[temp]) {
+            hash[temp] = 1;
+            *(str + lastUniqueIndex) = temp;
+            lastUniqueIndex++;
+        }
+        currentIndex++;
+    }
+    *(str + lastUniqueIndex) = '\0';
+}
 
-    if (size % 2) {
-        fputc('X', in);
+void removeSpaces(char str[]) {
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] <= 65 || str[i] >= 90) {
+            str[i] = 0;
+        }
     }
 }
 
-int main() {
-//    // Use plain text "HIDE THE GOLD IN THE TREE STUMP"
-//    in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
-//    if (in == NULL) {
-//        printf("Error while opening the file.\n");
-//        exit(1);
+void main() {
+//    int i, j, k = 0, l, m = 0, n;
+//    char key[MX][MX], keyminus[25], keystr[10], str[25] = {
+//            0
+//    };
+//    printf("\nstrlen(keystr): %d", strlen(keystr));
+//
+//    char alpa[26] = {
+//            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+//            'V', 'W', 'X', 'Y', 'Z'
+//    };
+//    printf("\n1.Encryption\n2.Decryption\n\nChoice(1 or 2):");
+//    scanf("%d", &choice);
+//    if (choice != 1 && choice != 2) {
+//        printf("Invalid Choice");
+//        return;
 //    }
+//    fflush(stdin);
+//    printf("\nEnter key:");
+//    gets(keystr);
+//    printf("\nstrlen(keystr): %d", strlen(keystr));
 //
-//    // Use "playfair example" as the key to encrypt the message
-//    kp = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\key.txt", "r");
-//    if (kp == NULL) {
-//        printf("Error while opening the file.\n");
-//        exit(1);
+//    printf("\n%s\n", keystr);
+//    printf("Enter the text:");
+//    gets(str);
+//    removeDuplicates(keystr);
+//
+//    printf("\n%s", keystr);
+//    printf("\nstrlen(keystr): %d\n\n", strlen(keystr));
+//
+//
+//    n = strlen(keystr);
+//    //convert the characters to uppertext
+//    for (i = 0; i < n; i++) {
+//        if (keystr[i] == 'j') keystr[i] = 'i';
+//        else if (keystr[i] == 'J') keystr[i] = 'I';
+//        keystr[i] = toupper(keystr[i]);
 //    }
-//
-//    controllaDigrafiDispari();
-//    readkey();
-//    readfile();
-//
-//    while (j != count) {
-//        if (arr[j + 1] != '\0')
-//            encrypt(arr[j], arr[j + 1]);
+//    //convert all the characters of plaintext to uppertext
+//    for (i = 0; i < strlen(str); i++) {
+//        if (str[i] == 'j') str[i] = 'i';
+//        else if (str[i] == 'J') str[i] = 'I';
+//        str[i] = toupper(str[i]);
 //    }
-//
-//    fclose(in);
+//    // store all characters except key
+//    j = 0;
+//    for (i = 0; i < 26; i++) {
+//        for (k = 0; k < n; k++) {
+//            if (keystr[k] == alpa[i]) break;
+//            else if (alpa[i] == 'J') break;
+//        }
+//        if (k == n) {
+//            keyminus[j] = alpa[i];
+//            j++;
+//        }
+//    }
+//    //construct key keymatrix
+//    k = 0;
+//    for (i = 0; i < MX; i++) {
+//        for (j = 0; j < MX; j++) {
+//            if (k < n) {
+//                key[i][j] = keystr[k];
+//                k++;
+//            } else {
+//                key[i][j] = keyminus[m];
+//                m++;
+//            }
+//            printf("%c ", key[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    // construct diagram and convert to cipher text
+//    printf("\nEntered text :%s\nOutput Text :", str);
+//    for (i = 0; i < strlen(str); i++) {
+//        if (str[i] == 'J') str[i] = 'I';
+//        if (str[i + 1] == '\0') playfair(str[i], 'X', key);
+//        else {
+//            if (str[i + 1] == 'J') str[i + 1] = 'I';
+//            if (str[i] == str[i + 1]) playfair(str[i], 'X', key);
+//            else {
+//                playfair(str[i], str[i + 1], key);
+//                i++;
+//            }
+//        }
+//    }
+//    if (choice == 2) printf(" (Remove unnecessary X)");
 
-
-//    readMessage();
-    buildMatrix(readKeyFile());
-
-
-    return 0;
+    buildMatrix(buildTableText(readKeyFile()));
+    fixMessage(readMessage());
 }

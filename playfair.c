@@ -4,46 +4,50 @@
 #include <string.h>
 #include <stdlib.h>
 
-char matrix[5][5];
-
-void buildMatrix(struct KeyFile keyFile) {
-
-    char tableText[26];
+const char *buildTableText(struct KeyFile keyFile) {
+    char temp[26] = {0};
     int count = 0;
 
     for (int i = 0; i < strlen(keyFile.key); i++) {
+        // se keyFile.key[i] è una lettera maiuscola...
         if (keyFile.key[i] >= 65 && keyFile.key[i] <= 90) {
-            if (!strchr(tableText, keyFile.key[i])) {
-                tableText[count] = keyFile.key[i];
-                if (count < 26)
-                    count++;
+            // se temp non contiene già keyFile.key[i]...
+            if (strchr(temp, keyFile.key[i]) == NULL) {
+                temp[count] = keyFile.key[i];
+                count++;
             }
         }
     }
 
-
-    for (int i = 0; i < 26; i++) {
-        if (!strchr(tableText, keyFile.alphabet[i])) {
-            tableText[count] = keyFile.alphabet[i];
-            if (count < 26)
-                count++;
+    for (int i = 0; i < 25; i++) {
+        if (strchr(temp, keyFile.alphabet[i]) == NULL) {
+            temp[count] = keyFile.alphabet[i];
+            count++;
         }
     }
 
+    printf("\n\n\nAlphabet: %s", keyFile.alphabet);
+    printf("\nMissing character: %c", keyFile.missingCharacter);
+    printf("\nSpecial character: %c", keyFile.specialCharacter);
+    printf("\nKey: %s", keyFile.key);
+    printf("\n");
 
-    printf("%s", keyFile.key);
-    printf("\n%s", tableText);
+    char *matrixText = (char *) malloc(26 * sizeof(char));
+    strcpy(matrixText, temp);
+    return matrixText;
+}
 
-    printf("fine testo tabella\n\n");
+void buildMatrix(const char *tableText) {
+    char matrix[5][5] = {0};
+    int count = 0;
 
-//    for (int i = 0; i < 5; i++) {
-//        for (int j = 0; j < 5; j++) {
-//            matrix[i][j] = tableText[count];
-//            count++;
-//        }
-//    }
-//
-//
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            matrix[i][j] = tableText[count];
+            count++;
+        }
+    }
+
     printf("\nStampo la matrice: \n");
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
@@ -51,4 +55,9 @@ void buildMatrix(struct KeyFile keyFile) {
         }
         printf("\n");
     }
+}
+
+void fixMessage(char *message) {
+    printf("\nmessage: %s", message);
+
 }

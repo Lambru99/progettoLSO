@@ -11,4 +11,8 @@ struct KeyFile {
     char *key;
 };
 
-void buildMatrix(struct KeyFile);
+const char *buildTableText(struct KeyFile);
+
+void buildMatrix(const char *);
+
+void fixMessage(char *);

@@ -37,11 +37,12 @@ char *readFile(char *path) {
  * struttura dopo averla opportunamente costruita.
  */
 struct KeyFile readKeyFile() {
-    struct KeyFile keyFile;
     FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\chiave.txt", "r+");
+    struct KeyFile keyFile;
+
     fgets(keyFile.alphabet, 26, in);
 
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < 25; i++)
         keyFile.alphabet[i] = (char) toupper(keyFile.alphabet[i]);
 
     int character;
@@ -49,17 +50,17 @@ struct KeyFile readKeyFile() {
         character = fgetc(in);
     } while (character == EOF || character == '\n');
 
-    keyFile.missingCharacter = (char) toupper(character);
+    keyFile.missingCharacter = (char) character;
+    keyFile.missingCharacter = (char) toupper(keyFile.missingCharacter);
 
     do {
         character = fgetc(in);
     } while (character == EOF || character == '\n');
-
     keyFile.specialCharacter = (char) toupper(character);
 
     int fileSize = getFileSize(in);
     char buf[fileSize];
-    keyFile.key = malloc(fileSize - 33);
+    keyFile.key = (char *) malloc(sizeof(char) * (fileSize - 32));
 
     while (fgets(buf, fileSize, in) != NULL) {}
     strcpy(keyFile.key, buf);
@@ -79,7 +80,7 @@ struct KeyFile readKeyFile() {
 char *readMessage() {
     FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
     char *content = malloc((getFileSize(in) + 1) * sizeof(char));
-    fgets(content, getFileSize(in)+1, in);
+    fgets(content, getFileSize(in) + 1, in);
     for (int i = 0; i < (getFileSize(in)); i++)
         content[i] = (char) toupper(content[i]);
     return content;
