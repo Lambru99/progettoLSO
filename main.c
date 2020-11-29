@@ -68,7 +68,7 @@ void removeSpaces(char str[]) {
     }
 }
 
-void main() {
+int main() {
 //    int i, j, k = 0, l, m = 0, n;
 //    char key[MX][MX], keyminus[25], keystr[10], str[25] = {
 //            0
@@ -155,6 +155,7 @@ void main() {
 //    }
 //    if (choice == 2) printf(" (Remove unnecessary X)");
 
-    buildMatrix(buildTableText(readKeyFile()));
-    fixMessage(readMessage());
+    init(readKeyFile(), readMessage());
+
+    return 0;
 }

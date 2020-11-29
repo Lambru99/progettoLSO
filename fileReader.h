@@ -8,4 +8,4 @@
 
 struct KeyFile readKeyFile();
 
-char * readMessage();
+char *readMessage();

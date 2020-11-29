@@ -61,9 +61,12 @@ struct KeyFile readKeyFile() {
     int fileSize = getFileSize(in);
     char buf[fileSize];
     keyFile.key = (char *) malloc(sizeof(char) * (fileSize - 32));
+//    keyFile.key = (char *) malloc(sizeof(char) + 1);
 
     while (fgets(buf, fileSize, in) != NULL) {}
     strcpy(keyFile.key, buf);
+
+    printf("\nkeyFile.key: %s", keyFile.key);
 
     for (int i = 0; i < (fileSize - 33); i++)
         keyFile.key[i] = (char) toupper(keyFile.key[i]);
