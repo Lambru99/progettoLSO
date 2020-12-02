@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/progettoLSO.dir/fileReader.c.obj"
-  "CMakeFiles/progettoLSO.dir/main.c.obj"
-  "CMakeFiles/progettoLSO.dir/playfair.c.obj"
-  "libprogettoLSO.dll.a"
-  "progettoLSO.exe"
-  "progettoLSO.exe.manifest"
+  "CMakeFiles/progettoLSO.dir/fileReader.c.o"
+  "CMakeFiles/progettoLSO.dir/main.c.o"
+  "CMakeFiles/progettoLSO.dir/playfair.c.o"
+  "progettoLSO"
   "progettoLSO.pdb"
 )
 

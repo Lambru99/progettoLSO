@@ -31,7 +31,7 @@ char *readFile(char *path) {
 
 void readKeyFile() {
     struct KeyFile keyFile;
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\chiave.txt", "r+");
+    FILE *in = fopen("/Users/leo/Documents/GitHub/progettoLSO/chiave.txt", "r+");
 
     fgets(keyFile.alphabet, 26, in);
     printf("%s", keyFile.alphabet);
@@ -63,7 +63,7 @@ void readKeyFile() {
 }
 
 void readText() {
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
+    FILE *in = fopen("/Users/leo/Documents/GitHub/progettoLSO/prova.txt", "r+");
     char *content = malloc((getFileSize(in) + 1) * sizeof(char));
 //    fscanf(in, "%s", content);
     fgets(content, getFileSize(in), in);

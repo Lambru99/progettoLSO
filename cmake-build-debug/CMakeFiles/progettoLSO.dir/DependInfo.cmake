@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/fileReader.c.obj"
-  "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.obj"
-  "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.c" "C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/playfair.c.obj"
+  "/Users/leo/Documents/GitHub/progettoLSO/fileReader.c" "/Users/leo/Documents/GitHub/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/fileReader.c.o"
+  "/Users/leo/Documents/GitHub/progettoLSO/main.c" "/Users/leo/Documents/GitHub/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.o"
+  "/Users/leo/Documents/GitHub/progettoLSO/playfair.c" "/Users/leo/Documents/GitHub/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/playfair.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
