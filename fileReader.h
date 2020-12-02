@@ -6,8 +6,8 @@
 
 #endif //PROGETTOLSO_FILEREADER_H
 
-struct KeyFile readKeyFile();
+struct KeyFile readKeyFile(char *);
 
-void toUpperKeyFile(struct KeyFile);
+void toUpperString(char *);
 
-char *readMessage();
+char *readMessage(char *);

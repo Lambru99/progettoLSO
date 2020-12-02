@@ -10,4 +10,6 @@ int getRow(char, char **);
 
 int getColumn(char, char **);
 
-void *encode(struct KeyFile keyFile, char *message);
+void *encode(struct KeyFile, char *);
+
+void *decode(struct KeyFile, char *);

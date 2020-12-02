@@ -21,14 +21,13 @@ long getFileSize(FILE *file) {
  * Legge il file contenente la chiave, l'alfabeto e i caratteri speciali e ritorna la rispettiva
  * struttura dopo averla opportunamente costruita.
  */
-struct KeyFile readKeyFile() {
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\keyfile.txt", "r+");
+struct KeyFile readKeyFile(char *path) {
+    FILE *in = fopen(path, "r+");
     struct KeyFile keyFile;
     int character;
 
     fgets(keyFile.alphabet, 26, in);
-    for (int i = 0; i < 25; i++)
-        keyFile.alphabet[i] = (char) toupper(keyFile.alphabet[i]);
+    toUpperString(keyFile.alphabet);
 
     do {
         character = fgetc(in);
@@ -46,20 +45,15 @@ struct KeyFile readKeyFile() {
 
     while (fgets(buf, fileSize, in) != NULL) {}
     strcpy(keyFile.key, buf);
-    for (int i = 0; i < strlen(keyFile.key); i++)
-        keyFile.key[i] = (char) toupper(keyFile.key[i]);
+    toUpperString(keyFile.key);
 
     fclose(in);
     return keyFile;
 }
 
-void toUpperKeyFile(struct KeyFile keyFile) {
-    for (int i = 0; i < 25; i++)
-        keyFile.alphabet[i] = (char) toupper(keyFile.alphabet[i]);
-    keyFile.missingCharacter = (char) toupper(keyFile.missingCharacter);
-    keyFile.specialCharacter = (char) toupper(keyFile.specialCharacter);
-    for (int i = 0; i < strlen(keyFile.key); i++)
-        keyFile.key[i] = (char) toupper(keyFile.key[i]);
+void toUpperString(char *string) {
+    for (int i = 0; i < strlen(string); i++)
+        string[i] = (char) toupper(string[i]);
 }
 
 /**
@@ -67,8 +61,8 @@ void toUpperKeyFile(struct KeyFile keyFile) {
  * in UPPERCASE
  * @return il contenuto del messaggio
  */
-char *readMessage() {
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\message.txt", "r+");
+char *readMessage(char *path) {
+    FILE *in = fopen(path, "r+");
     char *content = malloc((getFileSize(in) + 1) * sizeof(char));
     fgets(content, getFileSize(in) + 1, in);
     for (int i = 0; i < (getFileSize(in)); i++)

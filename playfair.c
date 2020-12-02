@@ -24,13 +24,14 @@ void init(struct KeyFile keyFile, char *message) {
 
     printf("\nmessage: %s", message);
     printf("\nfixedMessage: %s", fixedMessage);
+    free(matrix);
+    free(fixedMessage);
 }
 
 void *encode(struct KeyFile keyFile, char *message) {
     char **matrix = buildMatrix(getMatrixText(keyFile));
     char *fixedMessage = getFixedMessage(message, keyFile.specialCharacter);
     char *encodedMessage = (char *) calloc(strlen(fixedMessage) + 1, sizeof(char));
-
     int row1, column1, row2, column2, count = 0;
 
     for (int i = 0; i < strlen(fixedMessage); i += 2) {
@@ -59,7 +60,46 @@ void *encode(struct KeyFile keyFile, char *message) {
         }
     }
 
+    free(matrix);
+    free(fixedMessage);
     printf("\nencoded message: %s", encodedMessage);
+}
+
+void *decode(struct KeyFile keyFile, char *message) {
+    char **matrix = buildMatrix(getMatrixText(keyFile));
+    char *fixedMessage = getFixedMessage(message, keyFile.specialCharacter);
+    char *decodedMessage = (char *) calloc(strlen(fixedMessage) + 1, sizeof(char));
+    int row1, column1, row2, column2, count = 0;
+
+    for (int i = 0; i < strlen(message); i++) {
+        row1 = getRow(message[i], matrix);
+        column1 = getColumn(message[i], matrix);
+        row2 = getRow(message[i + 1], matrix);
+        column2 = getColumn(message[i + 1], matrix);
+
+        if (row1 == row2) {
+            if (column1 > 0) {
+                decodedMessage[count++] = matrix[row1][column1 - 1];
+            } else decodedMessage[count++] = matrix[row1][4];
+            if (column2 > 0) {
+                decodedMessage[count++] = matrix[row2][column2 - 1];
+            } else decodedMessage[count++] = matrix[row2][4];
+        } else if (column1 == column2) {
+            if (row1 > 0)
+                decodedMessage[count++] = matrix[row1 - 1][column1];
+            else decodedMessage[count++] = matrix[4][column1];
+            if (row2 > 0)
+                decodedMessage[count++] = matrix[row2 - 1][column2];
+            else decodedMessage[count++] = matrix[4][column2];
+        } else {
+            decodedMessage[count++] = matrix[row1][column2];
+            decodedMessage[count++] = matrix[row2][column1];
+        }
+    }
+
+    free(matrix);
+    free(fixedMessage);
+    printf("\ndecoded message: %s", decodedMessage);
 }
 
 int getRow(char c, char **matrix) {
