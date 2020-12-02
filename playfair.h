@@ -4,17 +4,10 @@
 
 #endif //PROGETTOLSO_PLAYFAIR_H
 
-struct KeyFile {
-    char alphabet[26];
-    char missingCharacter;
-    char specialCharacter;
-    char *key;
-};
+void init(struct KeyFile, char *);
 
-void init(struct KeyFile keyFile, char *message);
+int getRow(char, char **);
 
-const char *buildTableText(struct KeyFile);
+int getColumn(char, char **);
 
-char **buildMatrix(const char *);
-
-char *fixMessage(char *, struct KeyFile);
+void *encode(struct KeyFile keyFile, char *message);

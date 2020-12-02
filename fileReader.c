@@ -17,41 +17,23 @@ long getFileSize(FILE *file) {
     return size;
 }
 
-char *readFile(char *path) {
-    FILE *in = fopen(path, "rb");
-    if (in == NULL) {
-        printf("Error while opening the file.\n");
-        exit(1);
-    }
-
-    int length = getFileSize(in);
-
-    char *buffer = malloc(33);
-    fread(buffer, sizeof(char), length, in);
-    fclose(in);
-    return buffer;
-}
-
 /**
  * Legge il file contenente la chiave, l'alfabeto e i caratteri speciali e ritorna la rispettiva
  * struttura dopo averla opportunamente costruita.
  */
 struct KeyFile readKeyFile() {
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\chiave.txt", "r+");
+    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\keyfile.txt", "r+");
     struct KeyFile keyFile;
+    int character;
 
     fgets(keyFile.alphabet, 26, in);
-
     for (int i = 0; i < 25; i++)
         keyFile.alphabet[i] = (char) toupper(keyFile.alphabet[i]);
 
-    int character;
     do {
         character = fgetc(in);
     } while (character == EOF || character == '\n');
-
-    keyFile.missingCharacter = (char) character;
-    keyFile.missingCharacter = (char) toupper(keyFile.missingCharacter);
+    keyFile.missingCharacter = (char) toupper(character);
 
     do {
         character = fgetc(in);
@@ -61,18 +43,23 @@ struct KeyFile readKeyFile() {
     int fileSize = getFileSize(in);
     char buf[fileSize];
     keyFile.key = (char *) malloc(sizeof(char) * (fileSize - 32));
-//    keyFile.key = (char *) malloc(sizeof(char) + 1);
 
     while (fgets(buf, fileSize, in) != NULL) {}
     strcpy(keyFile.key, buf);
-
-    printf("\nkeyFile.key: %s", keyFile.key);
-
-    for (int i = 0; i < (fileSize - 33); i++)
+    for (int i = 0; i < strlen(keyFile.key); i++)
         keyFile.key[i] = (char) toupper(keyFile.key[i]);
 
     fclose(in);
     return keyFile;
+}
+
+void toUpperKeyFile(struct KeyFile keyFile) {
+    for (int i = 0; i < 25; i++)
+        keyFile.alphabet[i] = (char) toupper(keyFile.alphabet[i]);
+    keyFile.missingCharacter = (char) toupper(keyFile.missingCharacter);
+    keyFile.specialCharacter = (char) toupper(keyFile.specialCharacter);
+    for (int i = 0; i < strlen(keyFile.key); i++)
+        keyFile.key[i] = (char) toupper(keyFile.key[i]);
 }
 
 /**
@@ -81,7 +68,7 @@ struct KeyFile readKeyFile() {
  * @return il contenuto del messaggio
  */
 char *readMessage() {
-    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
+    FILE *in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\message.txt", "r+");
     char *content = malloc((getFileSize(in) + 1) * sizeof(char));
     fgets(content, getFileSize(in) + 1, in);
     for (int i = 0; i < (getFileSize(in)); i++)

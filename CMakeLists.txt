@@ -13,4 +13,4 @@ add_executable(progettoLSO
         LICENSE
         link_utili.txt
         main.c
-        prova.txt playfair.c playfair.h)
+        prova.txt initializer.c initializer.h playfair.c playfair.h)

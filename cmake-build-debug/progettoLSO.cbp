@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h">
 			<Option target="progettoLSO"/>
 		</Unit>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/key.txt">
 			<Option target="progettoLSO"/>
 		</Unit>

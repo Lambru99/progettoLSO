@@ -1,4 +1,4 @@
 abcdefghiklmnopqrstuvwxyz
 j
 x
-lumaca cane
+esempio playfair
