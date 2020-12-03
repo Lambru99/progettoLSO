@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/progettoLSO.dir/fileReader.c.o"
+  "CMakeFiles/progettoLSO.dir/initializer.c.o"
   "CMakeFiles/progettoLSO.dir/main.c.o"
   "CMakeFiles/progettoLSO.dir/playfair.c.o"
   "progettoLSO"

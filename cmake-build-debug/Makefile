@@ -150,6 +150,33 @@ fileReader.c.s:
 	$(MAKE) -f CMakeFiles/progettoLSO.dir/build.make CMakeFiles/progettoLSO.dir/fileReader.c.s
 .PHONY : fileReader.c.s
 
+initializer.o: initializer.c.o
+
+.PHONY : initializer.o
+
+# target to build an object file
+initializer.c.o:
+	$(MAKE) -f CMakeFiles/progettoLSO.dir/build.make CMakeFiles/progettoLSO.dir/initializer.c.o
+.PHONY : initializer.c.o
+
+initializer.i: initializer.c.i
+
+.PHONY : initializer.i
+
+# target to preprocess a source file
+initializer.c.i:
+	$(MAKE) -f CMakeFiles/progettoLSO.dir/build.make CMakeFiles/progettoLSO.dir/initializer.c.i
+.PHONY : initializer.c.i
+
+initializer.s: initializer.c.s
+
+.PHONY : initializer.s
+
+# target to generate assembly for a file
+initializer.c.s:
+	$(MAKE) -f CMakeFiles/progettoLSO.dir/build.make CMakeFiles/progettoLSO.dir/initializer.c.s
+.PHONY : initializer.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -216,6 +243,9 @@ help:
 	@echo "... fileReader.o"
 	@echo "... fileReader.i"
 	@echo "... fileReader.s"
+	@echo "... initializer.o"
+	@echo "... initializer.i"
+	@echo "... initializer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

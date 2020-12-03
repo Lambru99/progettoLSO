@@ -6,11 +6,15 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(progettoLSO
-        ascii_lettere_accentate.txt
+        encodedMessage.txt
         fileReader.c
         fileReader.h
-        key.txt
+        initializer.c
+        initializer.h
+        keyfile.txt
         LICENSE
         link_utili.txt
         main.c
-        prova.txt playfair.c playfair.h)
+        message.txt
+        playfair.c
+        playfair.h)

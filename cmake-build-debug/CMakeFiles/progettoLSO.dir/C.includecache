@@ -6,35 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/leo/Documents/GitHub/progettoLSO/fileReader.c
-fileReader.h
 /Users/leo/Documents/GitHub/progettoLSO/fileReader.h
-playfair.h
-/Users/leo/Documents/GitHub/progettoLSO/playfair.h
-stdlib.h
--
+initializer.h
+/Users/leo/Documents/GitHub/progettoLSO/initializer.h
 stdio.h
--
-string.h
 -
 
-/Users/leo/Documents/GitHub/progettoLSO/fileReader.h
-stdio.h
--
+/Users/leo/Documents/GitHub/progettoLSO/initializer.h
 
 /Users/leo/Documents/GitHub/progettoLSO/main.c
-fileReader.h
-/Users/leo/Documents/GitHub/progettoLSO/fileReader.h
 stdio.h
 -
 string.h
 -
-stdlib.h
--
-ctype.h
--
-
-/Users/leo/Documents/GitHub/progettoLSO/playfair.c
+fileReader.h
+/Users/leo/Documents/GitHub/progettoLSO/fileReader.h
 playfair.h
 /Users/leo/Documents/GitHub/progettoLSO/playfair.h
 

@@ -85,7 +85,7 @@
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/LICENSE">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/ascii_lettere_accentate.txt">
+		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/encodedMessage.txt">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/fileReader.c">
@@ -94,7 +94,13 @@
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/fileReader.h">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/key.txt">
+		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/initializer.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/initializer.h">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/keyfile.txt">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/link_utili.txt">
@@ -103,13 +109,13 @@
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/main.c">
 			<Option target="progettoLSO"/>
 		</Unit>
+		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/message.txt">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/playfair.c">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/playfair.h">
-			<Option target="progettoLSO"/>
-		</Unit>
-		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/prova.txt">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="/Users/leo/Documents/GitHub/progettoLSO/CMakeLists.txt">
