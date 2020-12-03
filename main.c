@@ -10,8 +10,10 @@ int main() {
 
 
     init(keyFile, message);
-    encode(keyFile, message);
-    //decode(keyFile, encodedMessage);
+    printf("\nencodedMessage: %s", encode(keyFile, message));
+    printf("\ndecodedMessage: %s", decode(keyFile, encodedMessage));
+
+
 
     return 0;
 }

@@ -13,34 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="552e70e5-593c-4bb6-bea7-1be3cc246a49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chiave.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/fileReader.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/fileReader.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/playfair.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/playfair.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progettoLSO.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/progettoLSO" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/progettoLSO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/progettoLSO.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/progettoLSO.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/progettoLSO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/progettoLSO.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileReader.c" beforeDir="false" afterPath="$PROJECT_DIR$/fileReader.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/fileReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playfair.c" beforeDir="false" afterPath="$PROJECT_DIR$/playfair.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playfair.h" beforeDir="false" afterPath="$PROJECT_DIR$/playfair.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prova.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +71,8 @@
       <workItem from="1606990215590" duration="85000" />
       <workItem from="1606990304208" duration="13000" />
       <workItem from="1606990346385" duration="5000" />
+      <workItem from="1606990389329" duration="1518000" />
+      <workItem from="1606992326019" duration="1694000" />
     </task>
     <servers />
   </component>
@@ -100,25 +80,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1156" height="207" key="GridCell.Tab.0.bottom" timestamp="1606990317084">
+    <state width="1394" height="144" key="GridCell.Tab.0.bottom" timestamp="1606994160746">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
-    <state width="1156" height="207" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1606990317084" />
-    <state width="1156" height="207" key="GridCell.Tab.0.center" timestamp="1606990317083">
+    <state width="1394" height="144" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1606994160746" />
+    <state width="1394" height="144" key="GridCell.Tab.0.center" timestamp="1606994160745">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
-    <state width="1156" height="207" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1606990317083" />
-    <state width="1156" height="207" key="GridCell.Tab.0.left" timestamp="1606990317083">
+    <state width="1394" height="144" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1606994160745" />
+    <state width="1394" height="144" key="GridCell.Tab.0.left" timestamp="1606994160745">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
-    <state width="1156" height="207" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1606990317083" />
-    <state width="1156" height="207" key="GridCell.Tab.0.right" timestamp="1606990317083">
+    <state width="1394" height="144" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1606994160745" />
+    <state width="1394" height="144" key="GridCell.Tab.0.right" timestamp="1606994160745">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605906316558" />
-    <state width="1156" height="207" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1606990317083" />
+    <state width="1394" height="144" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1606994160745" />
+    <state width="1394" height="167" key="GridCell.Tab.1.bottom" timestamp="1606993241336">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1394" height="167" key="GridCell.Tab.1.bottom/0.23.1440.834@0.23.1440.834" timestamp="1606993241336" />
+    <state width="1394" height="167" key="GridCell.Tab.1.center" timestamp="1606993241333">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1394" height="167" key="GridCell.Tab.1.center/0.23.1440.834@0.23.1440.834" timestamp="1606993241333" />
+    <state width="1394" height="167" key="GridCell.Tab.1.left" timestamp="1606993241332">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1394" height="167" key="GridCell.Tab.1.left/0.23.1440.834@0.23.1440.834" timestamp="1606993241332" />
+    <state width="1394" height="167" key="GridCell.Tab.1.right" timestamp="1606993241335">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1394" height="167" key="GridCell.Tab.1.right/0.23.1440.834@0.23.1440.834" timestamp="1606993241335" />
   </component>
 </project>

@@ -28,7 +28,7 @@ void init(struct KeyFile keyFile, char *message) {
     free(fixedMessage);
 }
 
-void *encode(struct KeyFile keyFile, char *message) {
+char *encode(struct KeyFile keyFile, char *message) {
     char **matrix = buildMatrix(getMatrixText(keyFile));
     char *fixedMessage = getFixedMessage(message, keyFile.specialCharacter);
     char *encodedMessage = (char *) calloc(strlen(fixedMessage) + 1, sizeof(char));
@@ -62,16 +62,17 @@ void *encode(struct KeyFile keyFile, char *message) {
 
     free(matrix);
     free(fixedMessage);
-    printf("\nencoded message: %s", encodedMessage);
+
+    return encodedMessage;
 }
 
-void *decode(struct KeyFile keyFile, char *message) {
+char *decode(struct KeyFile keyFile, char *message) {
     char **matrix = buildMatrix(getMatrixText(keyFile));
     char *fixedMessage = getFixedMessage(message, keyFile.specialCharacter);
     char *decodedMessage = (char *) calloc(strlen(fixedMessage) + 1, sizeof(char));
     int row1, column1, row2, column2, count = 0;
 
-    for (int i = 0; i < strlen(message); i++) {
+    for (int i = 0; i < strlen(message); i += 2) {
         row1 = getRow(message[i], matrix);
         column1 = getColumn(message[i], matrix);
         row2 = getRow(message[i + 1], matrix);
@@ -99,7 +100,8 @@ void *decode(struct KeyFile keyFile, char *message) {
 
     free(matrix);
     free(fixedMessage);
-    printf("\ndecoded message: %s", decodedMessage);
+
+    return decodedMessage;
 }
 
 int getRow(char c, char **matrix) {
@@ -123,7 +125,3 @@ int getColumn(char c, char **matrix) {
     }
     return column;
 }
-
-//char *decode(struct KeyFile keyFile, char *message) {
-//
-//}
