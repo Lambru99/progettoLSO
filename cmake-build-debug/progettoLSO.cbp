@@ -85,25 +85,22 @@
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/LICENSE">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/ascii_lettere_accentate.txt">
-			<Option target="progettoLSO"/>
-		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h">
 			<Option target="progettoLSO"/>
 		</Unit>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.h">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.c">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h">
-			<Option target="progettoLSO"/>
-		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/key.txt">
-			<Option target="progettoLSO"/>
-		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/link_utili.txt">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c">
@@ -113,9 +110,6 @@
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h">
-			<Option target="progettoLSO"/>
-		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/prova.txt">
 			<Option target="progettoLSO"/>
 		</Unit>
 		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/CMakeLists.txt">

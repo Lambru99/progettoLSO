@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.h
+
 C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h
 
 C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.c
@@ -13,6 +15,8 @@ initializer.h
 C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h
 playfair.h
 C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
+fileWriter.h
+C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.h
 stdio.h
 -
 string.h

@@ -5,6 +5,9 @@ CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../fileReader.c
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../fileReader.h
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../initializer.h
 
+CMakeFiles/progettoLSO.dir/fileWriter.c.obj: ../fileWriter.c
+CMakeFiles/progettoLSO.dir/fileWriter.c.obj: ../fileWriter.h
+
 CMakeFiles/progettoLSO.dir/initializer.c.obj: ../initializer.c
 CMakeFiles/progettoLSO.dir/initializer.c.obj: ../initializer.h
 
@@ -13,6 +16,7 @@ CMakeFiles/progettoLSO.dir/main.c.obj: ../initializer.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../main.c
 CMakeFiles/progettoLSO.dir/main.c.obj: ../playfair.h
 
+CMakeFiles/progettoLSO.dir/playfair.c.obj: ../fileWriter.h
 CMakeFiles/progettoLSO.dir/playfair.c.obj: ../initializer.h
 CMakeFiles/progettoLSO.dir/playfair.c.obj: ../playfair.c
 CMakeFiles/progettoLSO.dir/playfair.c.obj: ../playfair.h

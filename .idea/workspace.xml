@@ -64,7 +64,8 @@
       <workItem from="1606644991958" duration="19829000" />
       <workItem from="1606670757826" duration="3796000" />
       <workItem from="1606818084592" duration="18818000" />
-      <workItem from="1606922801567" duration="2182000" />
+      <workItem from="1606922801567" duration="3008000" />
+      <workItem from="1606989359787" duration="4422000" />
     </task>
     <servers />
   </component>
@@ -76,37 +77,32 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Notifications/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605971485425" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1606924998743">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606993265186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606924998743" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1606924998742">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606993265186" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1606994185908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606924998742" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1606924998742">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606994185908" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1606994185908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606924998742" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1606924998742">
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606994185908" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1606994185908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606924998742" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606994185908" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1606994185908">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1606994185908" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1605971525536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605971525536" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="keyFile.alphabet" language="ObjectiveC" />

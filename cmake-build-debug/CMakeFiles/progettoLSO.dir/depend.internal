@@ -5,6 +5,9 @@ CMakeFiles/progettoLSO.dir/fileReader.c.obj
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h
+CMakeFiles/progettoLSO.dir/fileWriter.c.obj
+ C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.c
+ C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.h
 CMakeFiles/progettoLSO.dir/initializer.c.obj
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.c
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h
@@ -14,6 +17,7 @@ CMakeFiles/progettoLSO.dir/main.c.obj
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
 CMakeFiles/progettoLSO.dir/playfair.c.obj
+ C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileWriter.h
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/initializer.h
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.c
  C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h

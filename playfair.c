@@ -1,5 +1,7 @@
 #include "initializer.h"
 #include "playfair.h"
+#include "fileWriter.h"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,7 +16,7 @@ void init(struct KeyFile keyFile, char *message) {
     printf("\nKey: %s", keyFile.key);
     printf("\n");
 
-    printf("\nStampo la matrice: \n");
+    printf("\nMatrix: \n");
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             printf("%c ", matrix[i][j]);
@@ -62,6 +64,7 @@ void *encode(struct KeyFile keyFile, char *message) {
 
     free(matrix);
     free(fixedMessage);
+    printMessageOnFile("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\encodedMessage.txt", encodedMessage);
     printf("\nencoded message: %s", encodedMessage);
 }
 
@@ -71,7 +74,7 @@ void *decode(struct KeyFile keyFile, char *message) {
     char *decodedMessage = (char *) calloc(strlen(fixedMessage) + 1, sizeof(char));
     int row1, column1, row2, column2, count = 0;
 
-    for (int i = 0; i < strlen(message); i++) {
+    for (int i = 0; i < strlen(message); i += 2) {
         row1 = getRow(message[i], matrix);
         column1 = getColumn(message[i], matrix);
         row2 = getRow(message[i + 1], matrix);
@@ -123,7 +126,3 @@ int getColumn(char c, char **matrix) {
     }
     return column;
 }
-
-//char *decode(struct KeyFile keyFile, char *message) {
-//
-//}
