@@ -80,6 +80,7 @@ char *addSpecialChar(char *alphaOnlyMessage, char specialChar) {
         fixedMessage[count - 1] = specialChar;
         fixedMessage[count] = '\0';
     }
+    free(alphaOnlyMessage);
     return fixedMessage;
 }
 

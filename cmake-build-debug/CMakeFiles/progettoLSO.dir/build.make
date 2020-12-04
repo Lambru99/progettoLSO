@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO"
+CMAKE_SOURCE_DIR = C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/progettoLSO.dir/depend.make
@@ -59,72 +59,72 @@ include CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: CMakeFiles/progettoLSO.dir/includes_C.rsp
 CMakeFiles/progettoLSO.dir/fileReader.c.obj: ../fileReader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/progettoLSO.dir/fileReader.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\fileReader.c.obj   -c "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileReader.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/progettoLSO.dir/fileReader.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\fileReader.c.obj   -c C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileReader.c
 
 CMakeFiles/progettoLSO.dir/fileReader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/progettoLSO.dir/fileReader.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileReader.c" > CMakeFiles\progettoLSO.dir\fileReader.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileReader.c > CMakeFiles\progettoLSO.dir\fileReader.c.i
 
 CMakeFiles/progettoLSO.dir/fileReader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/progettoLSO.dir/fileReader.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileReader.c" -o CMakeFiles\progettoLSO.dir\fileReader.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileReader.c -o CMakeFiles\progettoLSO.dir\fileReader.c.s
 
 CMakeFiles/progettoLSO.dir/main.c.obj: CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/main.c.obj: CMakeFiles/progettoLSO.dir/includes_C.rsp
 CMakeFiles/progettoLSO.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/progettoLSO.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\main.c.obj   -c "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/progettoLSO.dir/main.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\main.c.obj   -c C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\main.c
 
 CMakeFiles/progettoLSO.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/progettoLSO.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\main.c" > CMakeFiles\progettoLSO.dir\main.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\main.c > CMakeFiles\progettoLSO.dir\main.c.i
 
 CMakeFiles/progettoLSO.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/progettoLSO.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\main.c" -o CMakeFiles\progettoLSO.dir\main.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\main.c -o CMakeFiles\progettoLSO.dir\main.c.s
 
 CMakeFiles/progettoLSO.dir/initializer.c.obj: CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/initializer.c.obj: CMakeFiles/progettoLSO.dir/includes_C.rsp
 CMakeFiles/progettoLSO.dir/initializer.c.obj: ../initializer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/progettoLSO.dir/initializer.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\initializer.c.obj   -c "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\initializer.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/progettoLSO.dir/initializer.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\initializer.c.obj   -c C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\initializer.c
 
 CMakeFiles/progettoLSO.dir/initializer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/progettoLSO.dir/initializer.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\initializer.c" > CMakeFiles\progettoLSO.dir\initializer.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\initializer.c > CMakeFiles\progettoLSO.dir\initializer.c.i
 
 CMakeFiles/progettoLSO.dir/initializer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/progettoLSO.dir/initializer.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\initializer.c" -o CMakeFiles\progettoLSO.dir\initializer.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\initializer.c -o CMakeFiles\progettoLSO.dir\initializer.c.s
 
 CMakeFiles/progettoLSO.dir/playfair.c.obj: CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/playfair.c.obj: CMakeFiles/progettoLSO.dir/includes_C.rsp
 CMakeFiles/progettoLSO.dir/playfair.c.obj: ../playfair.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/progettoLSO.dir/playfair.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\playfair.c.obj   -c "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\playfair.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/progettoLSO.dir/playfair.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\playfair.c.obj   -c C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\playfair.c
 
 CMakeFiles/progettoLSO.dir/playfair.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/progettoLSO.dir/playfair.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\playfair.c" > CMakeFiles\progettoLSO.dir\playfair.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\playfair.c > CMakeFiles\progettoLSO.dir\playfair.c.i
 
 CMakeFiles/progettoLSO.dir/playfair.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/progettoLSO.dir/playfair.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\playfair.c" -o CMakeFiles\progettoLSO.dir\playfair.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\playfair.c -o CMakeFiles\progettoLSO.dir\playfair.c.s
 
 CMakeFiles/progettoLSO.dir/fileWriter.c.obj: CMakeFiles/progettoLSO.dir/flags.make
 CMakeFiles/progettoLSO.dir/fileWriter.c.obj: CMakeFiles/progettoLSO.dir/includes_C.rsp
 CMakeFiles/progettoLSO.dir/fileWriter.c.obj: ../fileWriter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/progettoLSO.dir/fileWriter.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\fileWriter.c.obj   -c "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileWriter.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/progettoLSO.dir/fileWriter.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\progettoLSO.dir\fileWriter.c.obj   -c C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileWriter.c
 
 CMakeFiles/progettoLSO.dir/fileWriter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/progettoLSO.dir/fileWriter.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileWriter.c" > CMakeFiles\progettoLSO.dir\fileWriter.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileWriter.c > CMakeFiles\progettoLSO.dir\fileWriter.c.i
 
 CMakeFiles/progettoLSO.dir/fileWriter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/progettoLSO.dir/fileWriter.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\fileWriter.c" -o CMakeFiles\progettoLSO.dir\fileWriter.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\fileWriter.c -o CMakeFiles\progettoLSO.dir\fileWriter.c.s
 
 # Object files for target progettoLSO
 progettoLSO_OBJECTS = \
@@ -146,7 +146,7 @@ progettoLSO.exe: CMakeFiles/progettoLSO.dir/build.make
 progettoLSO.exe: CMakeFiles/progettoLSO.dir/linklibs.rsp
 progettoLSO.exe: CMakeFiles/progettoLSO.dir/objects1.rsp
 progettoLSO.exe: CMakeFiles/progettoLSO.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable progettoLSO.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable progettoLSO.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\progettoLSO.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +159,6 @@ CMakeFiles/progettoLSO.dir/clean:
 .PHONY : CMakeFiles/progettoLSO.dir/clean
 
 CMakeFiles/progettoLSO.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles\progettoLSO.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles\progettoLSO.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/progettoLSO.dir/depend
 

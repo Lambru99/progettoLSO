@@ -64,7 +64,7 @@ void *encode(struct KeyFile keyFile, char *message) {
 
     free(matrix);
     free(fixedMessage);
-    printMessageOnFile("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\encodedMessage.txt", encodedMessage);
+    printMessageOnFile("C:\\Users\\Tommy\\Documents\\CLion_Workspace\\progettoLSO\\encodedMessage.pf", encodedMessage);
     printf("\nencoded message: %s", encodedMessage);
 }
 
