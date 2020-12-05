@@ -1,218 +1,38 @@
-#include "fileReader.h"
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include "fileReader.h"
+#include "playfair.h"
 
-FILE *in, *kp;
-char input[100];
-unsigned char key[50];
-char matrix[5][5];
-char arr[100];
-int j = 0;
-int count = 0;
-
-void encrypt(char a, char b) {
-    static int i = 0;
-    arr[i] = a;
-    arr[i + 1] = b;
-    char c;
-    if (a == b) {
-        c = b;
-        arr[i + 1] = 'X';
-        arr[i + 2] = c;
-    }
-
-    int p, q, r, s;
-    for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
-            if (arr[j] == matrix[x][y]) {
-                p = x;
-                q = y;
-            }
-        }
-    }
-
-    for (int u = 0; u < 5; u++) {
-        for (int t = 0; t < 5; t++) {
-            if (arr[j + 1] == matrix[u][t]) {
-                r = u;
-                s = t;
-            }
-        }
-    }
-
-    if (q == s)
-        printf("%c %c -> %c %c", a, b, matrix[(p + 1) % 5][q],
-               matrix[(r + 1) % 5][q]);
-    else if (p == r)
-        printf("%c %c -> %c %c", a, b, matrix[p][(q + 1) % 5],
-               matrix[p][(s + 1) % 5]);
-    else
-        printf("%c %c -> %c %c", a, b, matrix[p][s], matrix[r][q]);
-
-    if (a == b)
-        i = i + 3;
-    else
-        i = i + 2;
-
-    j = j + 2;
+void printInfo() {
+    printf("playfair encode <keyfile> <file1>\n");
 }
 
-void controllaAccentate(char ch) {
-    if (ch == 233 || ch == 232 || ch == 201 || ch == 200)
-        ch = 69;
-    if (ch == 224 || ch == 192)
-        ch = 65;
-    if (ch == 236 || ch == 204)
-        ch = 73;
-    if (ch == 242 || ch == 210)
-        ch = 79;
-    if (ch == 217 || ch == 219)
-        ch = 85;
-}
+int main(int argc, char **argv) {
+//    struct KeyFile keyFile = readKeyFile("C:\\Users\\Tommy\\Documents\\CLion_Workspace\\progettoLSO\\keyfile.txt");
+//    char *message = readMessage("C:\\Users\\Tommy\\Documents\\CLion_Workspace\\progettoLSO\\message.txt");
+//
+//    init(keyFile, message);
+//    encode(keyFile, message);
+//
+//    char *encodedMessage = readMessage("C:\\Users\\Tommy\\Documents\\CLion_Workspace\\progettoLSO\\encodedMessage.pf");
+//    decode(keyFile, encodedMessage);
+//
+//    return 0;
 
-void readkey() {
-    int i = 0;
-    unsigned char ch;
 
-    while (!feof(kp)) {
-        ch = getc(kp);
-
-        if (ch >= 97 && ch <= 122)
-            key[i++] = ch - 32;
-        else key[i++] = ch;
-    }
-
-    printf("\n");
-    for (int k = 0; k < i; k++) {
-        printf("%c", key[k]);
-    }
-    printf("\n");
-
-    int k = 0;
-    char inp[26];
-    int flag[26] = {0};
-    int index = 0;
-    int x = strlen(key) - 1;
-
-    while (x) {
-        if (key[k] != ' ') {
-            if (flag[key[k] - 65] != 1) {
-                inp[index] = key[k];
-                index++;
-                flag[key[k] - 65] = 1;
-            }
-        }
-        k++;
-        x--;
-    }
-
-    for (int t = 0; t < 26; t++) {
-        if (flag[t] != 1) {
-            flag[t] = 1;
-            if ((t + 65) != 'J') {
-                inp[index] = t + 65;
-                index++;
-            }
-        }
-    }
-
-    k = 0;
-    printf("\n");
-
-    for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
-            matrix[x][y] = inp[k++];
-            printf("%c ", matrix[x][y]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-}
-
-void readfile() {
-    char ch;
-    int k, i, n;
-    int size;
-    size = ftell(in);
-    rewind(in);
-    char a, b;
-
-    k = size / 2;
-    n = k;
-    int result;
-    char *ptr;
-
-    while (k) {
-        ptr = (char *) malloc(sizeof(char) * 2);
-        if (ptr == NULL) {
-            fputs("Memory Error", stderr);
-            exit(2);
-        }
-
-        result = fread(ptr, 1, 2, in);
-        if (result != 2) {
-            exit(3);
-        }
-
-        a = (*ptr);
-        b = *(ptr + 1);
-
-        while (a == ' ') {
-            a = b;
-            b = getc(in);
-        }
-
-        while (b == ' ') {
-            b = getc(in);
-        }
-
-        encrypt(a, b);
-        printf("\n");
-        count = count + 2;
-        free(ptr);
-        k--;
-    }
-}
-
-void controllaDigrafiDispari() {
-    fseek(in, 0, SEEK_END);
-    int size = ftell(in);
-
-    if (size % 2) {
-        fputc('X', in);
-    }
-}
-
-int main() {
-//    // Use plain text "HIDE THE GOLD IN THE TREE STUMP"
-//    in = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\prova.txt", "r+");
-//    if (in == NULL) {
-//        printf("Error while opening the file.\n");
-//        exit(1);
+//    if (argc != 4) {
+//        printf("Wrong number of parameters (expected 4 are %d)!\n\n", argc);
+//        printInfo();
+//        return -1;
 //    }
-//
-//    // Use "playfair example" as the key to encrypt the message
-//    kp = fopen("C:\\Users\\Tommy\\Documents\\CLion Workspace\\progettoLSO\\key.txt", "r");
-//    if (kp == NULL) {
-//        printf("Error while opening the file.\n");
-//        exit(1);
-//    }
-//
-//    controllaDigrafiDispari();
-//    readkey();
-//    readfile();
-//
-//    while (j != count) {
-//        if (arr[j + 1] != '\0')
-//            encrypt(arr[j], arr[j + 1]);
-//    }
-//
-//    fclose(in);
-
-    readKeyFile();
-//    readText();
-
-    return 0;
+    if (strcmp(argv[1], "encode")==0) {
+        encode(readKeyFile(argv[2]), readMessage(argv[3]));
+        return 0;
+    }
+    if (strcmp(argv[1], "decode")==0) {
+        decode(readKeyFile(argv[2]), readMessage(argv[3]));
+        return 0;
+    }
+    printf("Unknown command %s!\n",argv[1]);
+    printInfo();
 }

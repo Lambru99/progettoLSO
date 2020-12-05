@@ -4,9 +4,12 @@
 
 #endif //PROGETTOLSO_PLAYFAIR_H
 
-struct KeyFile {
-    char alphabet[26];
-    char missingCharacter;
-    char specialCharacter;
-    char *key;
-};
+void init(struct KeyFile, char *);
+
+int getRow(char, char **);
+
+int getColumn(char, char **);
+
+void *encode(struct KeyFile, char *);
+
+void *decode(struct KeyFile, char *);

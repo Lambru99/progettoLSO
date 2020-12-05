@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="progettoLSO">
-				<Option output="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/progettoLSO.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug"/>
+				<Option output="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/progettoLSO.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/."/>
+					<Add directory="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/."/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
@@ -43,20 +43,20 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 progettoLSO"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 progettoLSO"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="progettoLSO/fast">
-				<Option output="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/progettoLSO.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug"/>
+				<Option output="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/progettoLSO.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/."/>
+					<Add directory="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/."/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
@@ -65,54 +65,54 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 progettoLSO/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 progettoLSO/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/LICENSE">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/LICENSE">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/ascii_lettere_accentate.txt">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileReader.c">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileReader.h">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileWriter.c">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/key.txt">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileWriter.h">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/link_utili.txt">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.c">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/main.c">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.h">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.c">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/main.c">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/playfair.c">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/prova.txt">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/playfair.h">
 			<Option target="progettoLSO"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/CMakeLists.txt">
+		<Unit filename="C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

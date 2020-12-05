@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO"
+CMAKE_SOURCE_DIR = C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Tommy\Documents\CLion Workspace\progettoLSO\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tommy\Documents\CLion_Workspace\progettoLSO\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,60 @@ fileReader.c.s:
 	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileReader.c.s
 .PHONY : fileReader.c.s
 
+fileWriter.obj: fileWriter.c.obj
+
+.PHONY : fileWriter.obj
+
+# target to build an object file
+fileWriter.c.obj:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileWriter.c.obj
+.PHONY : fileWriter.c.obj
+
+fileWriter.i: fileWriter.c.i
+
+.PHONY : fileWriter.i
+
+# target to preprocess a source file
+fileWriter.c.i:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileWriter.c.i
+.PHONY : fileWriter.c.i
+
+fileWriter.s: fileWriter.c.s
+
+.PHONY : fileWriter.s
+
+# target to generate assembly for a file
+fileWriter.c.s:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/fileWriter.c.s
+.PHONY : fileWriter.c.s
+
+initializer.obj: initializer.c.obj
+
+.PHONY : initializer.obj
+
+# target to build an object file
+initializer.c.obj:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/initializer.c.obj
+.PHONY : initializer.c.obj
+
+initializer.i: initializer.c.i
+
+.PHONY : initializer.i
+
+# target to preprocess a source file
+initializer.c.i:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/initializer.c.i
+.PHONY : initializer.c.i
+
+initializer.s: initializer.c.s
+
+.PHONY : initializer.s
+
+# target to generate assembly for a file
+initializer.c.s:
+	$(MAKE) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/initializer.c.s
+.PHONY : initializer.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -215,6 +269,12 @@ help:
 	@echo ... fileReader.obj
 	@echo ... fileReader.i
 	@echo ... fileReader.s
+	@echo ... fileWriter.obj
+	@echo ... fileWriter.i
+	@echo ... fileWriter.s
+	@echo ... initializer.obj
+	@echo ... initializer.i
+	@echo ... initializer.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,4 +1,4 @@
-
+#include "initializer.h"
 #include <stdio.h>
 
 #ifndef PROGETTOLSO_FILEREADER_H
@@ -6,6 +6,8 @@
 
 #endif //PROGETTOLSO_FILEREADER_H
 
-void readKeyFile();
+struct KeyFile readKeyFile(char *);
 
-void readText();
+void toUpperString(char *);
+
+char *readMessage(char *);

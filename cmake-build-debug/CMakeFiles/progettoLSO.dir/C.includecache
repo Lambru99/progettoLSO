@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.c
-fileReader.h
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h
-playfair.h
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
-stdlib.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileReader.h
+initializer.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.h
+stdio.h
 -
+
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.h
+
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/main.c
 stdio.h
 -
 string.h
 -
+fileReader.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileReader.h
+playfair.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/playfair.h
 
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/fileReader.h
-stdio.h
--
-
-C:/Users/Tommy/Documents/CLion Workspace/progettoLSO/playfair.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/playfair.h
 
