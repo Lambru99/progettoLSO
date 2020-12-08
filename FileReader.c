@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "FileReader.h"
 
@@ -14,15 +15,14 @@ FILE *openFile(char *filePath) {
 
     if (fReader == NULL) {
         fprintf(stderr, "Errore!\nNon esiste file nella directory specificata.");
-        // Program exits if file pointer returns NULL.
         exit(EXIT_FAILURE);
     }
 
     return fReader;
 }
 
-int getFileSize(FILE *file) {
-    int size;
+long getFileSize(FILE *file) {
+    long size;
 
     fseek(file, 0, SEEK_END);
     size = ftell(file);
@@ -31,21 +31,21 @@ int getFileSize(FILE *file) {
     return size;
 }
 
-int countFileLines(FILE *file) {
-    int lines = 0;
-    int currentChar;
+char *loadMessage(char *filePath) {
+    FILE *fPointer;
+    long fSize;
+    char *fText;
 
-    while (1) {
-        currentChar = getc(file);
-        if (currentChar == '\n') {
-            lines++;
-        }
-        if (feof(file)) {
-            break;
-        }
-    }
+    fPointer = openFile(filePath);
+    fSize = getFileSize(fPointer);
+    fText = (char *) malloc(sizeof(char) * fSize + 1);
+    fread(fText, sizeof(char), fSize, fPointer);
 
-    return lines;
+    fclose(fPointer);
+
+    fText[fSize] = '\0';
+
+    return fText;
 }
 
 int countCharLine(FILE *file) {
@@ -71,23 +71,18 @@ int countCharLine(FILE *file) {
 Key getKeyInfo(char *filePath) {
     Key key;
     FILE *fReader;
-    int fileSize;
+    long fileSize;
     int currentChar;
 
     fReader = openFile(filePath);
     fileSize = getFileSize(fReader);
-    key.alphabet = (char *) malloc(sizeof(char) * 25);
-    if (key.alphabet == NULL) {
-        fprintf(stderr, "Errore!\nNon è possibile allocare memoria.");
-        exit(EXIT_FAILURE);
-    }
-    key.key = (char *) malloc(sizeof(char) * (fileSize - 33));
+    key.key = malloc(sizeof key.key * (fileSize - 32));
     if (key.key == NULL) {
         fprintf(stderr, "Errore!\nNon è possibile allocare memoria.");
         exit(EXIT_FAILURE);
     }
 
-    fgets(key.alphabet, 26, fReader);
+    fgets(key.alphabet, sizeof key.alphabet, fReader);
     do {
         currentChar = fgetc(fReader);
     } while (currentChar == '\n');
@@ -106,28 +101,4 @@ Key getKeyInfo(char *filePath) {
     fclose(fReader);
 
     return key;
-}
-
-DirList getDirectoriesFileList(char *filePath) {
-    DirList dirList;
-    FILE *dirReader;
-    char *currentDir;
-    int currentDirSize;
-
-    initList(&dirList);
-    dirReader = openFile(filePath);
-
-    while (1) {
-        currentDirSize = countCharLine(dirReader);
-        if (currentDirSize != 0) {
-            currentDir = malloc(sizeof(char) * currentDirSize);
-            fscanf(dirReader, "%s\n", currentDir);
-            addElement(&dirList, currentDir);
-        } else
-            break;
-    }
-
-    fclose(dirReader);
-
-    return dirList;
 }

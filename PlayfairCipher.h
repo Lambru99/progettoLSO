@@ -6,14 +6,18 @@
 #define PROGETTOLSO_PLAYFAIRCIPHER_H
 
 #include "KeyStruct.h"
-#include "DirList.h"
 
-void initializeCipher(char *, char *);
+extern const int row;
+extern const int col;
 
-void encode(Key, DirList);
+char **initMatrix();
 
-void decode(Key, DirList);
+void fillMatrix(char [row][col], Key);
 
-void freeInfo(Key, DirList);
+char *cleanMessage(char *);
+
+void encode(Key, char *);
+
+void decode(Key, char *);
 
 #endif //PROGETTOLSO_PLAYFAIRCIPHER_H

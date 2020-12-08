@@ -142,33 +142,6 @@ progettoLSO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/build
 .PHONY : progettoLSO/fast
 
-DirList.obj: DirList.c.obj
-
-.PHONY : DirList.obj
-
-# target to build an object file
-DirList.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/DirList.c.obj
-.PHONY : DirList.c.obj
-
-DirList.i: DirList.c.i
-
-.PHONY : DirList.i
-
-# target to preprocess a source file
-DirList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/DirList.c.i
-.PHONY : DirList.c.i
-
-DirList.s: DirList.c.s
-
-.PHONY : DirList.s
-
-# target to generate assembly for a file
-DirList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/DirList.c.s
-.PHONY : DirList.c.s
-
 FileReader.obj: FileReader.c.obj
 
 .PHONY : FileReader.obj
@@ -259,9 +232,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... progettoLSO
-	@echo ... DirList.obj
-	@echo ... DirList.i
-	@echo ... DirList.s
 	@echo ... FileReader.obj
 	@echo ... FileReader.i
 	@echo ... FileReader.s

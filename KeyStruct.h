@@ -6,7 +6,7 @@
 #define PROGETTOLSO_KEYSTRUCT_H
 
 typedef struct {
-    char *alphabet;
+    char alphabet[26];
     char missingChar;
     char specialChar;
     char *key;
