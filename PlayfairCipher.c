@@ -107,6 +107,35 @@ char *cleanMessage(char *message) {
     return cleanedMessage;
 }
 
+char *digraphMessage(char *message, char specialChar) {
+    //da capire la grandezza di digraphedMessage
+    char *digraphedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
+    int currentIndex = 0;
+
+    while (*message != '\0') {
+        digraphedMessage[currentIndex] = *message++;
+        if (*message != '\0') {
+            if (digraphedMessage[currentIndex] != *message) {
+                currentIndex++;
+                digraphedMessage[currentIndex] = *message++;
+            } else {
+                currentIndex++;
+                digraphedMessage[currentIndex] = specialChar;
+            }
+        } else {
+            currentIndex++;
+            digraphedMessage[currentIndex] = specialChar;
+            break;
+        }
+    }
+
+    digraphedMessage = (char *) realloc(digraphedMessage, sizeof(char) * currentIndex + 1);
+
+    digraphedMessage[currentIndex] = '\0';
+
+    return digraphedMessage;
+}
+
 void encode(Key key, char *file) {
     char matrix[row][col];
     char *message = loadMessage(file);

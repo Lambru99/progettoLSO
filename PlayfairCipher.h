@@ -16,6 +16,8 @@ void fillMatrix(char [row][col], Key);
 
 char *cleanMessage(char *);
 
+char *digraphMessage(char *, char);
+
 void encode(Key, char *);
 
 void decode(Key, char *);
