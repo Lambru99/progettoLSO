@@ -16,7 +16,6 @@ void printInfo() {
 //}
 
 int main(int argc, char **argv) {
-
     if (argc < 5) {
         fprintf(stderr, "Error!\nWrong number of parameters (expected 5 instead of %d).", argc);
         exit(EXIT_FAILURE);
@@ -30,8 +29,7 @@ int main(int argc, char **argv) {
 //            for (int i = 4; i < argc; i++)
 //                decode(key, argv[i]);
 //        }
-//        free(key.alphabet);
-//        free(key.key);
+        free(key.key);
     }
 
     return 0;

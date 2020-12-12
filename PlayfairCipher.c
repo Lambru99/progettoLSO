@@ -58,29 +58,24 @@ const int col = 5;
 void fillMatrix(char matrix[row][col], Key key) {
     char letters[25] = {0};
     int lettersIndex = 0;
-    int keyCharIndex = 0;
-    int alphabetCharIndex = 0;
+    char *currentAlphabetChar = key.alphabet;
 
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
-            if (key.key[keyCharIndex] != '\0') {
-                if (key.key[keyCharIndex] != ' ' && strchr(letters, key.key[keyCharIndex]) == NULL) {
-                    letters[lettersIndex] = key.key[keyCharIndex];
+            if (*key.key != '\0') {
+                if (*key.key != ' ' && strchr(letters, *key.key) == NULL) {
+                    matrix[i][j] = letters[lettersIndex] = *key.key++;
                     lettersIndex++;
-                    matrix[i][j] = key.key[keyCharIndex];
-                    keyCharIndex++;
                 } else {
-                    keyCharIndex++;
+                    key.key++;
                     j--;
                 }
-            } else if (key.alphabet[alphabetCharIndex] != '\0') {
-                if (strchr(letters, key.alphabet[alphabetCharIndex]) == NULL) {
-                    letters[lettersIndex] = key.alphabet[alphabetCharIndex];
+            } else if (*currentAlphabetChar != '\0') {
+                if (strchr(letters, *currentAlphabetChar) == NULL) {
+                    matrix[i][j] = letters[lettersIndex] = *currentAlphabetChar++;
                     lettersIndex++;
-                    matrix[i][j] = key.alphabet[alphabetCharIndex];
-                    alphabetCharIndex++;
                 } else {
-                    alphabetCharIndex++;
+                    currentAlphabetChar++;
                     j--;
                 }
             }
@@ -92,19 +87,20 @@ char *cleanMessage(char *message) {
     char *cleanedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
     int currentIndex = 0;
 
-    for (int i = 0; i < strlen(message); i++) {
-        if (isspace(message[i]) == 0 && isalpha(message[i]) != 0) {
-            if (islower(message[i]) == 0) {
-                cleanedMessage[currentIndex] = (char) tolower(message[i]);
+    while (*message != '\0') {
+        if (isspace(*message) == 0 && isalpha(*message) != 0) {
+            if (islower(*message) == 0) {
+                cleanedMessage[currentIndex] = (char) tolower(*message++);
                 currentIndex++;
             } else {
-                cleanedMessage[currentIndex] = message[i];
+                cleanedMessage[currentIndex] = *message++;
                 currentIndex++;
             }
-        }
+        } else
+            message++;
     }
 
-    cleanedMessage = realloc(cleanedMessage, sizeof(char) * currentIndex);
+    cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * currentIndex + 1);
 
     cleanedMessage[currentIndex] = '\0';
 
@@ -114,6 +110,7 @@ char *cleanMessage(char *message) {
 void encode(Key key, char *file) {
     char matrix[row][col];
     char *message = loadMessage(file);
+    //da sostituire cleanedMessage con message
     char *cleanedMessage = cleanMessage(message);
 
     fillMatrix(matrix, key);

@@ -30,3 +30,15 @@ C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
 KeyStruct.h
 C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
 
+C:/Users/Paolo/CLionProjects/progettoLSO/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+PlayfairCipher.h
+C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
+FileReader.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
+
