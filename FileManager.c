@@ -4,14 +4,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-#include "FileReader.h"
+#include "FileManager.h"
 
 FILE *openFile(char *filePath) {
     FILE *fReader;
 
-    fReader = fopen(filePath, "r");
+    fReader = fopen(filePath, "a+");
 
     if (fReader == NULL) {
         fprintf(stderr, "Errore!\nNon esiste file nella directory specificata.");
@@ -48,25 +47,31 @@ char *loadMessage(char *filePath) {
     return fText;
 }
 
-int countCharLine(FILE *file) {
-    int count = 0;
-    int currentChar;
-    fpos_t pos;
+void saveMessage(char *filePath, char *message) {
+    FILE *fPointer = openFile(filePath);
 
-    fgetpos(file, &pos);
-
-    while (1) {
-        currentChar = getc(file);
-        if (currentChar != '\n' && currentChar != EOF)
-            count++;
-        else
-            break;
-    }
-
-    fsetpos(file, &pos);
-
-    return count;
+    fprintf(fPointer, "%s", message);
 }
+
+//int countCharLine(FILE *file) {
+//    int count = 0;
+//    int currentChar;
+//    fpos_t pos;
+//
+//    fgetpos(file, &pos);
+//
+//    while (1) {
+//        currentChar = getc(file);
+//        if (currentChar != '\n' && currentChar != EOF)
+//            count++;
+//        else
+//            break;
+//    }
+//
+//    fsetpos(file, &pos);
+//
+//    return count;
+//}
 
 Key getKeyInfo(char *filePath) {
     Key key;

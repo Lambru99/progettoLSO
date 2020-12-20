@@ -7,7 +7,7 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
@@ -38,9 +38,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
-    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -61,59 +71,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607175879840">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607175879840" />
-    <state width="450" height="487" key="DebuggerActiveHint" timestamp="1606686828034">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="450" height="487" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1606686828034" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607783487626">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607783487626" />
-    <state width="1877" height="234" key="GridCell.Tab.0.bottom" timestamp="1607193333184">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607193333184" />
-    <state width="1877" height="234" key="GridCell.Tab.0.center" timestamp="1607193333184">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607193333184" />
-    <state width="1877" height="234" key="GridCell.Tab.0.left" timestamp="1607193333184">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607193333184" />
-    <state width="1877" height="234" key="GridCell.Tab.0.right" timestamp="1607193333184">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607193333184" />
-    <state width="1877" height="184" key="GridCell.Tab.1.bottom" timestamp="1606687425090">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="184" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606687425090" />
-    <state width="1877" height="184" key="GridCell.Tab.1.center" timestamp="1606687425089">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="184" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606687425089" />
-    <state width="1877" height="184" key="GridCell.Tab.1.left" timestamp="1606687425089">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="184" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606687425089" />
-    <state width="1877" height="184" key="GridCell.Tab.1.right" timestamp="1606687425089">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="184" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606687425089" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1607815171854">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1607815171854" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607192892194">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607192892194" />
   </component>
 </project>
