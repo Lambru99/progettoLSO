@@ -12,6 +12,8 @@ C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.h
 stdio.h
 -
 
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileWriter.h
+
 C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/initializer.h
 
 C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/main.c
@@ -21,6 +23,8 @@ string.h
 -
 fileReader.h
 C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileReader.h
+fileWriter.h
+C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/fileWriter.h
 playfair.h
 C:/Users/Tommy/Documents/CLion_Workspace/progettoLSO/playfair.h
 
