@@ -22,7 +22,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
   <component name="ProjectId" id="1kFOPcXhrwN1JmI0Ayo7FxUAHHY" />
   <component name="ProjectViewState">
@@ -34,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunManager">
     <configuration name="progettoLSO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progettoLSO" TARGET_NAME="progettoLSO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progettoLSO" RUN_TARGET_NAME="progettoLSO">
@@ -67,7 +71,10 @@
       <workItem from="1606922801567" duration="3008000" />
       <workItem from="1606989359787" duration="4422000" />
       <workItem from="1607073086241" duration="5417000" />
-      <workItem from="1607078985382" duration="4518000" />
+      <workItem from="1607078985382" duration="5117000" />
+      <workItem from="1607175480431" duration="19771000" />
+      <workItem from="1607254691839" duration="1807000" />
+      <workItem from="1607674324585" duration="8452000" />
     </task>
     <servers />
   </component>
@@ -75,10 +82,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Notifications" timestamp="1605971485425">
+    <state x="552" y="178" key="#Notifications" timestamp="1607678417934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Notifications/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605971485425" />
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607678417934" />
+    <state x="708" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607679139640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607679139640" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606993265186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -87,26 +98,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607078065526" />
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1607080705644">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1607682581268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607080705644" />
-    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1607080705644">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607682581268" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1607682581268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607080705644" />
-    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1607080705644">
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607682581268" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1607682581267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607080705644" />
-    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1607080705644">
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607682581267" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1607682581268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607080705644" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1605971525536">
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607682581268" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1607678473712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1605971525536" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1607678473712" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
