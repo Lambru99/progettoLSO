@@ -142,32 +142,59 @@ progettoLSO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/build
 .PHONY : progettoLSO/fast
 
-FileManager.obj: FileManager.c.obj
+FileReader.obj: FileReader.c.obj
 
-.PHONY : FileManager.obj
+.PHONY : FileReader.obj
 
 # target to build an object file
-FileManager.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.obj
-.PHONY : FileManager.c.obj
+FileReader.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileReader.c.obj
+.PHONY : FileReader.c.obj
 
-FileManager.i: FileManager.c.i
+FileReader.i: FileReader.c.i
 
-.PHONY : FileManager.i
+.PHONY : FileReader.i
 
 # target to preprocess a source file
-FileManager.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.i
-.PHONY : FileManager.c.i
+FileReader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileReader.c.i
+.PHONY : FileReader.c.i
 
-FileManager.s: FileManager.c.s
+FileReader.s: FileReader.c.s
 
-.PHONY : FileManager.s
+.PHONY : FileReader.s
 
 # target to generate assembly for a file
-FileManager.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.s
-.PHONY : FileManager.c.s
+FileReader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileReader.c.s
+.PHONY : FileReader.c.s
+
+FileWriter.obj: FileWriter.c.obj
+
+.PHONY : FileWriter.obj
+
+# target to build an object file
+FileWriter.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileWriter.c.obj
+.PHONY : FileWriter.c.obj
+
+FileWriter.i: FileWriter.c.i
+
+.PHONY : FileWriter.i
+
+# target to preprocess a source file
+FileWriter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileWriter.c.i
+.PHONY : FileWriter.c.i
+
+FileWriter.s: FileWriter.c.s
+
+.PHONY : FileWriter.s
+
+# target to generate assembly for a file
+FileWriter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileWriter.c.s
+.PHONY : FileWriter.c.s
 
 PlayfairCipher.obj: PlayfairCipher.c.obj
 
@@ -195,6 +222,33 @@ PlayfairCipher.s: PlayfairCipher.c.s
 PlayfairCipher.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/PlayfairCipher.c.s
 .PHONY : PlayfairCipher.c.s
+
+PlayfairUtilities.obj: PlayfairUtilities.c.obj
+
+.PHONY : PlayfairUtilities.obj
+
+# target to build an object file
+PlayfairUtilities.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj
+.PHONY : PlayfairUtilities.c.obj
+
+PlayfairUtilities.i: PlayfairUtilities.c.i
+
+.PHONY : PlayfairUtilities.i
+
+# target to preprocess a source file
+PlayfairUtilities.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.i
+.PHONY : PlayfairUtilities.c.i
+
+PlayfairUtilities.s: PlayfairUtilities.c.s
+
+.PHONY : PlayfairUtilities.s
+
+# target to generate assembly for a file
+PlayfairUtilities.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.s
+.PHONY : PlayfairUtilities.c.s
 
 main.obj: main.c.obj
 
@@ -232,12 +286,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... progettoLSO
-	@echo ... FileManager.obj
-	@echo ... FileManager.i
-	@echo ... FileManager.s
+	@echo ... FileReader.obj
+	@echo ... FileReader.i
+	@echo ... FileReader.s
+	@echo ... FileWriter.obj
+	@echo ... FileWriter.i
+	@echo ... FileWriter.s
 	@echo ... PlayfairCipher.obj
 	@echo ... PlayfairCipher.i
 	@echo ... PlayfairCipher.s
+	@echo ... PlayfairUtilities.obj
+	@echo ... PlayfairUtilities.i
+	@echo ... PlayfairUtilities.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

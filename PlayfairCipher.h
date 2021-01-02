@@ -6,33 +6,39 @@
 #define PROGETTOLSO_PLAYFAIRCIPHER_H
 
 #include "KeyStruct.h"
-//#include "Utilities.h"
-
-//extern const int row;
-//extern const int col;
 
 #define ROW 5
 #define COL 5
 
-typedef struct {
-    int X;
-    int Y;
-} Coordinates;
+//typedef struct {
+//    int X;
+//    int Y;
+//} Coordinates;
+//
+//void fillMatrix(char [5][5], Key);
+//
+//char *cleanMessage(char *);
+//
+//char *digraphMessage(char *, char);
+//
+//char *encodeMessage(char *, char matrix[ROW][COL]);
+//
+//char *decodeMessage(char *, char matrix[ROW][COL], char);
+//
+//Coordinates findCoordinates(char, char[ROW][COL]);
+//
+//char encodeSameRow(Coordinates, char[ROW][COL]);
+//
+//char encodeSameCol(Coordinates, char[ROW][COL]);
+//
+//char decodeSameRow(Coordinates, char[ROW][COL]);
+//
+//char decodeSameCol(Coordinates, char[ROW][COL]);
+//
+//char *specialCharRemover(char *, char);
 
-void fillMatrix(char [ROW][COL], Key);
+char *encode(Key, char [5][5], char *);
 
-char *cleanMessage(char *);
-
-char *digraphMessage(char *, char);
-
-Coordinates findCoordinates(char, char[ROW][COL]);
-
-char encodeSameRow(Coordinates, char[ROW][COL]);
-
-char encodeSameCol(Coordinates, char[ROW][COL]);
-
-char *encode(Key, char[ROW][COL], char *);
-
-void decode(Key, char[ROW][COL], char *);
+char *decode(Key, char [5][5], char *);
 
 #endif //PROGETTOLSO_PLAYFAIRCIPHER_H

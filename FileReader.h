@@ -2,8 +2,8 @@
 // Created by Paolo on 15/11/2020.
 //
 
-#ifndef PROGETTOLSO_FILEMANAGER_H
-#define PROGETTOLSO_FILEMANAGER_H
+#ifndef PROGETTOLSO_FILEREADER_H
+#define PROGETTOLSO_FILEREADER_H
 
 #include <stdio.h>
 
@@ -17,8 +17,6 @@ long getFileSize(FILE *);
 
 char *loadMessage(char *);
 
-void saveMessage(char *, char *);
-
 Key getKeyInfo(char *);
 
-#endif //PROGETTOLSO_FILEMANAGER_H
+#endif //PROGETTOLSO_FILEREADER_H

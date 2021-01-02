@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "FileManager.h"
+#include "FileReader.h"
 
 FILE *openFile(char *filePath) {
     FILE *fReader;
@@ -45,12 +45,6 @@ char *loadMessage(char *filePath) {
     fText[fSize] = '\0';
 
     return fText;
-}
-
-void saveMessage(char *filePath, char *message) {
-    FILE *fPointer = openFile(filePath);
-
-    fprintf(fPointer, "%s", message);
 }
 
 //int countCharLine(FILE *file) {

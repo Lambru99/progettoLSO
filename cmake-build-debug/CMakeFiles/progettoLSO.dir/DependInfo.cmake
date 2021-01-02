@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Paolo/CLionProjects/progettoLSO/FileManager.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/FileManager.c.obj"
+  "C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/FileReader.c.obj"
+  "C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/FileWriter.c.obj"
   "C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj"
+  "C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairUtilities.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj"
   "C:/Users/Paolo/CLionProjects/progettoLSO/main.c" "C:/Users/Paolo/CLionProjects/progettoLSO/cmake-build-debug/CMakeFiles/progettoLSO.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

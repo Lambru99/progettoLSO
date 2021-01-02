@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <libgen.h>
 
 #include "PlayfairCipher.h"
-#include "FileManager.h"
+#include "FileReader.h"
+#include "PlayfairUtilities.h"
+#include "FileWriter.h"
 
 void printInfo() {
     printf("playfair encode|decode <keyfile> <outputdir> <file1> ... <filen>\n");
@@ -21,29 +22,20 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Error!\nWrong number of parameters (expected 5 instead of %d).", argc);
         exit(EXIT_FAILURE);
     } else {
-        char matrix[ROW][COL];
         Key key = getKeyInfo(argv[2]);
-//        initMatrix(matrix, key);
+        toUpperString(key.key);
+        toUpperString(key.alphabet);
+        char matrix[5][5];
         fillMatrix(matrix, key);
         if (strcmp(argv[1], "encode") == 0) {
-            for (int i = 4; i < argc; i++) {
-//                char *message = loadMessage(argv[i]);
-                char *encodedMessage = encode(key, matrix, loadMessage(argv[i]));
-                char *destinationDyr = (char *) malloc(sizeof(char) * (strlen(argv[i]) + strlen(basename(argv[i]))));
-                strcpy(destinationDyr, argv[3]);
-
-                strcat(destinationDyr, basename(argv[i]));
-//                saveMessage(argv[3]+basename(argv[i]), encodedMessage);
-                printf("%s", destinationDyr);
-//                encode(key, matrix, message);
-            }
+            for (int i = 4; i < argc; i++)
+                saveMessage(encode(key, matrix, loadMessage(argv[i])), argv[3], argv[i], ".pf");
+        } else {
+            for (int i = 4; i < argc; i++)
+                saveMessage(decode(key, matrix, loadMessage(argv[i])), argv[3], argv[i], ".dec");
         }
+        free(key.key);
     }
-//    else {
-//        for (int i = 4; i < argc; i++)
-//            decode(key, argv[i]);
-//    }
-
 
     return 0;
 }
