@@ -6,35 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
-stdio.h
--
-KeyStruct.h
-C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
-
-C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
-
-C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.c
+C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.c
 stdio.h
 -
 stdlib.h
 -
 string.h
 -
-ctype.h
--
-PlayfairCipher.h
-C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
-FileReader.h
-C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
-PlayfairUtilities.h
-C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairUtilities.h
+FileWriter.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.h
 
-C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairCipher.h
-KeyStruct.h
-C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
-
-C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairUtilities.h
-KeyStruct.h
-C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.h
 

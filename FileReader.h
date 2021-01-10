@@ -13,9 +13,7 @@ FILE *openFile(char *);
 
 long getFileSize(FILE *);
 
-//int countFileLines(FILE *);
-
-char *loadMessage(char *);
+char *loadMessage(FILE *, long);
 
 Key getKeyInfo(char *);
 

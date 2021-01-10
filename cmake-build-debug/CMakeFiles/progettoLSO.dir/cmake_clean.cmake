@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/progettoLSO.dir/FileManager.c.obj"
   "CMakeFiles/progettoLSO.dir/FileReader.c.obj"
   "CMakeFiles/progettoLSO.dir/FileWriter.c.obj"
   "CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj"

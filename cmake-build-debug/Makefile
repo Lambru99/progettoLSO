@@ -142,6 +142,33 @@ progettoLSO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/build
 .PHONY : progettoLSO/fast
 
+FileManager.obj: FileManager.c.obj
+
+.PHONY : FileManager.obj
+
+# target to build an object file
+FileManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.obj
+.PHONY : FileManager.c.obj
+
+FileManager.i: FileManager.c.i
+
+.PHONY : FileManager.i
+
+# target to preprocess a source file
+FileManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.i
+.PHONY : FileManager.c.i
+
+FileManager.s: FileManager.c.s
+
+.PHONY : FileManager.s
+
+# target to generate assembly for a file
+FileManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/FileManager.c.s
+.PHONY : FileManager.c.s
+
 FileReader.obj: FileReader.c.obj
 
 .PHONY : FileReader.obj
@@ -286,6 +313,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... progettoLSO
+	@echo ... FileManager.obj
+	@echo ... FileManager.i
+	@echo ... FileManager.s
 	@echo ... FileReader.obj
 	@echo ... FileReader.i
 	@echo ... FileReader.s

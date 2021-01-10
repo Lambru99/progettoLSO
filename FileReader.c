@@ -10,8 +10,7 @@
 FILE *openFile(char *filePath) {
     FILE *fReader;
 
-    fReader = fopen(filePath, "a+");
-
+    fReader = fopen(filePath, "r");
     if (fReader == NULL) {
         fprintf(stderr, "Errore!\nNon esiste file nella directory specificata.");
         exit(EXIT_FAILURE);
@@ -30,21 +29,27 @@ long getFileSize(FILE *file) {
     return size;
 }
 
-char *loadMessage(char *filePath) {
-    FILE *fPointer;
-    long fSize;
-    char *fText;
+char *loadMessage(FILE *file, long nChar) {
+    char *fText = (char *) malloc(sizeof(char) * (nChar + 1));
+    if (fText == NULL) {
+        fprintf(stderr, "Errore!\nNon è possibile allocare memoria.");
+        exit(EXIT_FAILURE);
+    }
 
-    fPointer = openFile(filePath);
-    fSize = getFileSize(fPointer);
-    fText = (char *) malloc(sizeof(char) * fSize + 1);
-    fread(fText, sizeof(char), fSize, fPointer);
+    size_t charLetti = fread(fText, sizeof(char), nChar, file);
 
-    fclose(fPointer);
-
-    fText[fSize] = '\0';
-
-    return fText;
+    if (nChar != charLetti) {
+        fText = (char *) realloc(fText, sizeof(char) * (charLetti + 1));
+        if (fText == NULL) {
+            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
+            exit(EXIT_FAILURE);
+        }
+        fText[charLetti] = '\0';
+        return fText;
+    } else {
+        fText[nChar] = '\0';
+        return fText;
+    }
 }
 
 //int countCharLine(FILE *file) {

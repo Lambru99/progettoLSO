@@ -18,11 +18,13 @@ void toUpperString(char *);
 
 char *removeCharFromMessage(char, char *);
 
-char *toAlphaMessage(char *);
-
-Coordinates findCoordinates(char, char[5][5]);
+char *cleanMessage(char *);
 
 char *digraphMessage(char *, char);
+
+char *fixDigraphedMessage(FILE *, char *, char, long *);
+
+Coordinates findCoordinates(char, char[5][5]);
 
 char *encodeMessage(char *, char [5][5]);
 

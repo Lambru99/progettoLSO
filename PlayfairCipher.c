@@ -4,34 +4,116 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
 #include "PlayfairCipher.h"
-#include "FileReader.h"
 #include "PlayfairUtilities.h"
+#include "FileReader.h"
+#include "FileWriter.h"
 
-char *encode(Key key, char matrix[5][5], char *message) {
-    //Trasferire tutte le chiamate dei metodi dentro encodeMessage?
-    toUpperString(message);
+void encode(Key key, char matrix[5][5], char *outputDir, char *messageDir) {
+    FILE *fReader = openFile(messageDir);
+    long fSize = getFileSize(fReader);
 
-    message = toAlphaMessage(message);
-    message = digraphMessage(message, (char) toupper(key.specialChar));
-    message = encodeMessage(message, matrix);
-//    for (int i = 0; i < 5; i++) {
-//        for (int j = 0; j < 5; j++) {
-//            printf("%c ", matrix[i][j]);
-//        }
-//        printf("\n");
-//    }
+    while (fSize > 0) {
+        char *message;
+        char *cleanedMessage;
+        char *digraphedMessage;
+        char *encodedMessage;
 
-    return message;
+        if (BUFFER < fSize) {
+            message = loadMessage(fReader, BUFFER);
+
+            fSize -= BUFFER;
+
+            cleanedMessage = cleanMessage(message);
+            free(message);
+
+            toUpperString(cleanedMessage);
+
+            digraphedMessage = digraphMessage(cleanedMessage, key.specialChar);
+            free(cleanedMessage);
+
+            char *fixedDigraphedMessage = fixDigraphedMessage(fReader, digraphedMessage, key.specialChar, &fSize);
+            free(digraphedMessage);
+
+            encodedMessage = encodeMessage(fixedDigraphedMessage, matrix);
+            free(fixedDigraphedMessage);
+
+            saveMessage(encodedMessage, outputDir, messageDir, ".pf");
+
+            free(encodedMessage);
+        } else {
+            message = loadMessage(fReader, fSize);
+
+            fSize -= fSize;
+
+            cleanedMessage = cleanMessage(message);
+            free(message);
+
+            toUpperString(cleanedMessage);
+
+            digraphedMessage = digraphMessage(cleanedMessage, key.specialChar);
+            free(cleanedMessage);
+
+            encodedMessage = encodeMessage(digraphedMessage, matrix);
+            free(digraphedMessage);
+
+            saveMessage(encodedMessage, outputDir, messageDir, ".pf");
+
+            free(encodedMessage);
+        }
+    }
+
+    fclose(fReader);
 }
 
-char *decode(Key key, char matrix[5][5], char *message) {
-    //Trasferire removeCharFromMessage dentro decodeMessage?
-    message = decodeMessage(message, matrix);
-    message = removeCharFromMessage((char) toupper(key.specialChar), message);
+void decode(Key key, char matrix[5][5], char *outputDir, char *messageDir) {
+    FILE *fReader = openFile(messageDir);
+    long fSize = getFileSize(fReader);
 
-    return message;
+    while (fSize > 0) {
+        char *message;
+        char *cleanedMessage;
+        char *decodedMessage;
+        char *fixedMessage;
+
+        if (BUFFER < fSize) {
+            message = loadMessage(fReader, BUFFER);
+            fgetc(fReader);
+
+            fSize -= BUFFER + 1;
+
+            cleanedMessage = removeCharFromMessage(' ', message);
+            free(message);
+
+            decodedMessage = decodeMessage(cleanedMessage, matrix);
+            free(cleanedMessage);
+
+            fixedMessage = removeCharFromMessage(key.specialChar, decodedMessage);
+            free(decodedMessage);
+
+            saveMessage(fixedMessage, outputDir, messageDir, ".dec");
+
+            free(fixedMessage);
+        } else {
+            message = loadMessage(fReader, fSize);
+
+            fSize -= fSize;
+
+            cleanedMessage = removeCharFromMessage(' ', message);
+            free(message);
+
+            decodedMessage = decodeMessage(cleanedMessage, matrix);
+            free(cleanedMessage);
+
+            fixedMessage = removeCharFromMessage(key.specialChar, decodedMessage);
+            free(decodedMessage);
+
+            saveMessage(fixedMessage, outputDir, messageDir, ".dec");
+
+            free(fixedMessage);
+        }
+    }
+
+    fclose(fReader);
 }

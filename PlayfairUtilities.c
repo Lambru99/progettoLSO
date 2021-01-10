@@ -1,6 +1,7 @@
 //
 // Created by Paolo on 02/01/2021.
 //
+
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
@@ -45,7 +46,8 @@ void toUpperString(char *string) {
 }
 
 char *removeCharFromMessage(char charToRemove, char *message) {
-    char *cleanedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
+    size_t messageLength = strlen(message);
+    char *cleanedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
     int currentIndex = 0;
 
     while (*message != '\0') {
@@ -55,16 +57,23 @@ char *removeCharFromMessage(char charToRemove, char *message) {
             message++;
     }
 
-    cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * currentIndex + 1);
-    cleanedMessage[currentIndex] = '\0';
-
-//    free(message);
-
-    return cleanedMessage;
+    if (currentIndex != messageLength) {
+        cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * (currentIndex + 1));
+        if (cleanedMessage == NULL) {
+            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
+            exit(EXIT_FAILURE);
+        }
+        cleanedMessage[currentIndex] = '\0';
+        return cleanedMessage;
+    } else {
+        cleanedMessage[currentIndex] = '\0';
+        return cleanedMessage;
+    }
 }
 
-char *toAlphaMessage(char *message) {
-    char *cleanedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
+char *cleanMessage(char *message) {
+    size_t messageLength = strlen(message);
+    char *cleanedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
     int currentIndex = 0;
 
     while (*message != '\0') {
@@ -74,16 +83,23 @@ char *toAlphaMessage(char *message) {
             message++;
     }
 
-    cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * currentIndex + 1);
-    cleanedMessage[currentIndex] = '\0';
-
-//    free(message);
-
-    return cleanedMessage;
+    if (currentIndex != messageLength) {
+        cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * (currentIndex + 1));
+        if (cleanedMessage == NULL) {
+            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
+            exit(EXIT_FAILURE);
+        }
+        cleanedMessage[currentIndex] = '\0';
+        return cleanedMessage;
+    } else {
+        cleanedMessage[currentIndex] = '\0';
+        return cleanedMessage;
+    }
 }
 
 char *digraphMessage(char *message, char specialChar) {
-    char *digraphedMessage = (char *) malloc(sizeof(char) * ((strlen(message) * 2) + 1));
+    size_t messageLength = strlen(message);
+    char *digraphedMessage = (char *) malloc(sizeof(char) * ((messageLength * 2) + 1));
     int currentIndex = 0;
 
     while (*message != '\0') {
@@ -99,16 +115,52 @@ char *digraphMessage(char *message, char specialChar) {
         } else {
             currentIndex++;
             digraphedMessage[currentIndex++] = specialChar;
-            break;
         }
     }
 
-    digraphedMessage = (char *) realloc(digraphedMessage, sizeof(char) * currentIndex + 1);
-    digraphedMessage[currentIndex] = '\0';
+    if (currentIndex != (messageLength * 2)) {
+        digraphedMessage = (char *) realloc(digraphedMessage, sizeof(char) * (currentIndex + 1));
+        if (digraphedMessage == NULL) {
+            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
+            exit(EXIT_FAILURE);
+        }
+        digraphedMessage[currentIndex] = '\0';
+        return digraphedMessage;
+    } else {
+        digraphedMessage[currentIndex] = '\0';
+        return digraphedMessage;
+    }
+}
 
-//    free(message);
+char *fixDigraphedMessage(FILE *fReader, char *message, char specialChar, long *fSize) {
+    size_t messageLength = strlen(message);
+    char *fixedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
 
-    return digraphedMessage;
+    strcpy(fixedMessage, message);
+
+    while (fixedMessage[strlen(fixedMessage) - 1] == specialChar && *fSize > 0) {
+        char c = (char) toupper(getc(fReader));
+        (*fSize)--;
+        if (isalpha(c) != 0) {
+            if (c == fixedMessage[strlen(fixedMessage) - 2]) {
+                size_t size = strlen(fixedMessage);
+                fixedMessage = (char *) realloc(fixedMessage,
+                                                (sizeof(char) * 3) + size);
+                if (fixedMessage == NULL) {
+                    fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
+                    exit(EXIT_FAILURE);
+                }
+                fixedMessage[size++] = c;
+                fixedMessage[size++] = specialChar;
+                fixedMessage[size] = '\0';
+            } else {
+                fixedMessage[strlen(fixedMessage) - 1] = c;
+                fixedMessage[strlen(fixedMessage)] = '\0';
+            }
+        }
+    }
+
+    return fixedMessage;
 }
 
 Coordinates findCoordinates(char c, char matrix[5][5]) {
@@ -143,8 +195,6 @@ char encodeSameCol(Coordinates coordinates, char matrix[5][5]) {
 }
 
 char *encodeMessage(char *message, char matrix[5][5]) {
-    printf("%s\n", message);
-
     char *encodedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
     int currentIndex = 0;
 
@@ -163,12 +213,8 @@ char *encodeMessage(char *message, char matrix[5][5]) {
             encodedMessage[currentIndex++] = matrix[secondChar.X][firstChar.Y];
         }
     }
-    printf("%d\n", currentIndex);
-    printf("%s\n", encodedMessage);
 
     encodedMessage[currentIndex] = '\0';
-
-//    free(message);
 
     return encodedMessage;
 }
@@ -210,8 +256,6 @@ char *decodeMessage(char *message, char matrix[5][5]) {
     }
 
     decodedMessage[currentIndex] = '\0';
-
-//    free(message);
 
     return decodedMessage;
 }
