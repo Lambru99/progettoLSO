@@ -107,6 +107,12 @@
 		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/PlayfairUtilities.h">
 			<Option target="progettoLSO"/>
 		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/StringManager.c">
+			<Option target="progettoLSO"/>
+		</Unit>
+		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/StringManager.h">
+			<Option target="progettoLSO"/>
+		</Unit>
 		<Unit filename="C:/Users/Paolo/CLionProjects/progettoLSO/main.c">
 			<Option target="progettoLSO"/>
 		</Unit>

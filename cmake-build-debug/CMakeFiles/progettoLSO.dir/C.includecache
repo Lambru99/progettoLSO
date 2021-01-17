@@ -6,15 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.c
+C:/Users/Paolo/CLionProjects/progettoLSO/FileManager.h
 stdio.h
 -
-stdlib.h
--
-string.h
--
-FileWriter.h
-C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.h
 
-C:/Users/Paolo/CLionProjects/progettoLSO/FileWriter.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.c
+FileReader.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
+FileManager.h
+C:/Users/Paolo/CLionProjects/progettoLSO/FileManager.h
+StringManager.h
+C:/Users/Paolo/CLionProjects/progettoLSO/StringManager.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/FileReader.h
+stdio.h
+-
+KeyStruct.h
+C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/KeyStruct.h
+
+C:/Users/Paolo/CLionProjects/progettoLSO/StringManager.h
 

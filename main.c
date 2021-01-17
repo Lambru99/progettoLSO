@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -6,6 +5,7 @@
 #include "PlayfairCipher.h"
 #include "FileReader.h"
 #include "PlayfairUtilities.h"
+#include "StringManager.h"
 
 void printInfo() {
     printf("playfair encode|decode <keyfile> <outputdir> <file1> ... <filen>\n");

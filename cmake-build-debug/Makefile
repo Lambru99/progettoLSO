@@ -277,6 +277,33 @@ PlayfairUtilities.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.s
 .PHONY : PlayfairUtilities.c.s
 
+StringManager.obj: StringManager.c.obj
+
+.PHONY : StringManager.obj
+
+# target to build an object file
+StringManager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/StringManager.c.obj
+.PHONY : StringManager.c.obj
+
+StringManager.i: StringManager.c.i
+
+.PHONY : StringManager.i
+
+# target to preprocess a source file
+StringManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/StringManager.c.i
+.PHONY : StringManager.c.i
+
+StringManager.s: StringManager.c.s
+
+.PHONY : StringManager.s
+
+# target to generate assembly for a file
+StringManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\progettoLSO.dir\build.make CMakeFiles/progettoLSO.dir/StringManager.c.s
+.PHONY : StringManager.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -328,6 +355,9 @@ help:
 	@echo ... PlayfairUtilities.obj
 	@echo ... PlayfairUtilities.i
 	@echo ... PlayfairUtilities.s
+	@echo ... StringManager.obj
+	@echo ... StringManager.i
+	@echo ... StringManager.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

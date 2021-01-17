@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/progettoLSO.dir/FileWriter.c.obj"
   "CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj"
   "CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj"
+  "CMakeFiles/progettoLSO.dir/StringManager.c.obj"
   "CMakeFiles/progettoLSO.dir/main.c.obj"
   "libprogettoLSO.dll.a"
   "progettoLSO.exe"

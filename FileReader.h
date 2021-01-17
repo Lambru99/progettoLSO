@@ -9,11 +9,11 @@
 
 #include "KeyStruct.h"
 
-FILE *openFile(char *);
-
 long getFileSize(FILE *);
 
 char *loadMessage(FILE *, long);
+
+char getLastCharFromFile(char *);
 
 Key getKeyInfo(char *);
 

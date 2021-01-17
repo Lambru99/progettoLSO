@@ -3,11 +3,10 @@
 //
 
 #include <ctype.h>
-#include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 #include "PlayfairUtilities.h"
+#include "StringManager.h"
 
 void fillMatrix(char matrix[5][5], Key key) {
     char letters[25] = {0};
@@ -35,71 +34,9 @@ void fillMatrix(char matrix[5][5], Key key) {
     }
 }
 
-void toUpperString(char *string) {
-    while (*string != '\0') {
-        if (isupper(*string) == 0) {
-            *string = (char) toupper(*string);
-            string++;
-        } else
-            string++;
-    }
-}
-
-char *removeCharFromMessage(char charToRemove, char *message) {
-    size_t messageLength = strlen(message);
-    char *cleanedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
-    int currentIndex = 0;
-
-    while (*message != '\0') {
-        if (*message != charToRemove)
-            cleanedMessage[currentIndex++] = *message++;
-        else
-            message++;
-    }
-
-    if (currentIndex != messageLength) {
-        cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * (currentIndex + 1));
-        if (cleanedMessage == NULL) {
-            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
-            exit(EXIT_FAILURE);
-        }
-        cleanedMessage[currentIndex] = '\0';
-        return cleanedMessage;
-    } else {
-        cleanedMessage[currentIndex] = '\0';
-        return cleanedMessage;
-    }
-}
-
-char *cleanMessage(char *message) {
-    size_t messageLength = strlen(message);
-    char *cleanedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
-    int currentIndex = 0;
-
-    while (*message != '\0') {
-        if (isalpha(*message) != 0)
-            cleanedMessage[currentIndex++] = *message++;
-        else
-            message++;
-    }
-
-    if (currentIndex != messageLength) {
-        cleanedMessage = (char *) realloc(cleanedMessage, sizeof(char) * (currentIndex + 1));
-        if (cleanedMessage == NULL) {
-            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
-            exit(EXIT_FAILURE);
-        }
-        cleanedMessage[currentIndex] = '\0';
-        return cleanedMessage;
-    } else {
-        cleanedMessage[currentIndex] = '\0';
-        return cleanedMessage;
-    }
-}
-
 char *digraphMessage(char *message, char specialChar) {
     size_t messageLength = strlen(message);
-    char *digraphedMessage = (char *) malloc(sizeof(char) * ((messageLength * 2) + 1));
+    char *digraphedMessage = allocateString((messageLength * 2) + 1);
     int currentIndex = 0;
 
     while (*message != '\0') {
@@ -112,52 +49,49 @@ char *digraphMessage(char *message, char specialChar) {
                 currentIndex++;
                 digraphedMessage[currentIndex++] = specialChar;
             }
-        } else {
+        } else
             currentIndex++;
-            digraphedMessage[currentIndex++] = specialChar;
-        }
     }
 
     if (currentIndex != (messageLength * 2)) {
-        digraphedMessage = (char *) realloc(digraphedMessage, sizeof(char) * (currentIndex + 1));
-        if (digraphedMessage == NULL) {
-            fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
-            exit(EXIT_FAILURE);
-        }
+        digraphedMessage = reallocateString(digraphedMessage, currentIndex + 1);
         digraphedMessage[currentIndex] = '\0';
+
         return digraphedMessage;
     } else {
         digraphedMessage[currentIndex] = '\0';
+
         return digraphedMessage;
     }
 }
 
 char *fixDigraphedMessage(FILE *fReader, char *message, char specialChar, long *fSize) {
-    size_t messageLength = strlen(message);
-    char *fixedMessage = (char *) malloc(sizeof(char) * (messageLength + 1));
+    char *fixedMessage = allocateString(strlen(message) + 1);
 
     strcpy(fixedMessage, message);
 
-    while (fixedMessage[strlen(fixedMessage) - 1] == specialChar && *fSize > 0) {
+    while (strlen(fixedMessage) % 2 != 0 && *fSize > 0) {
         char c = (char) toupper(getc(fReader));
         (*fSize)--;
         if (isalpha(c) != 0) {
-            if (c == fixedMessage[strlen(fixedMessage) - 2]) {
-                size_t size = strlen(fixedMessage);
-                fixedMessage = (char *) realloc(fixedMessage,
-                                                (sizeof(char) * 3) + size);
-                if (fixedMessage == NULL) {
-                    fprintf(stderr, "Errore!\nNon è possibile riallocare memoria.");
-                    exit(EXIT_FAILURE);
-                }
+            size_t size = strlen(fixedMessage);
+            fixedMessage = reallocateString(fixedMessage, size + 2);
+            if (c != fixedMessage[size - 1]) {
                 fixedMessage[size++] = c;
-                fixedMessage[size++] = specialChar;
                 fixedMessage[size] = '\0';
             } else {
-                fixedMessage[strlen(fixedMessage) - 1] = c;
-                fixedMessage[strlen(fixedMessage)] = '\0';
+                fixedMessage[size++] = specialChar;
+                fixedMessage[size] = '\0';
+                fseek(fReader, -1, SEEK_CUR);
+                (*fSize)++;
             }
         }
+    }
+    if (strlen(fixedMessage) % 2 != 0) {
+        size_t size = strlen(fixedMessage);
+        fixedMessage = reallocateString(fixedMessage, size + 2);
+        fixedMessage[size++] = specialChar;
+        fixedMessage[size] = '\0';
     }
 
     return fixedMessage;
@@ -167,12 +101,11 @@ Coordinates findCoordinates(char c, char matrix[5][5]) {
     Coordinates coordinates;
 
     for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
+        for (int y = 0; y < 5; y++)
             if (matrix[x][y] == c) {
                 coordinates.X = x;
                 coordinates.Y = y;
             }
-        }
     }
 
     return coordinates;
@@ -195,7 +128,7 @@ char encodeSameCol(Coordinates coordinates, char matrix[5][5]) {
 }
 
 char *encodeMessage(char *message, char matrix[5][5]) {
-    char *encodedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
+    char *encodedMessage = allocateString(strlen(message) + 1);
     int currentIndex = 0;
 
     while (*message != '\0') {
@@ -236,7 +169,7 @@ char decodeSameCol(Coordinates coordinates, char matrix[5][5]) {
 }
 
 char *decodeMessage(char *message, char matrix[5][5]) {
-    char *decodedMessage = (char *) malloc(sizeof(char) * (strlen(message) + 1));
+    char *decodedMessage = allocateString(strlen(message) + 1);
     int currentIndex = 0;
 
     while (*message != '\0') {

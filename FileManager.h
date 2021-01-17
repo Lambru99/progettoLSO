@@ -11,4 +11,6 @@ FILE *openFileToRead(char *);
 
 FILE *openFileToAppend(char *);
 
+long getFileSize(FILE *);
+
 #endif //PROGETTOLSO_FILEMANAGER_H

@@ -2,117 +2,83 @@
 // Created by Paolo on 15/11/2020.
 //
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "PlayfairCipher.h"
 #include "PlayfairUtilities.h"
+#include "FileManager.h"
 #include "FileReader.h"
 #include "FileWriter.h"
+#include "StringManager.h"
 
 void encode(Key key, char matrix[5][5], char *outputDir, char *messageDir) {
-    FILE *fReader = openFile(messageDir);
+    FILE *fReader = openFileToRead(messageDir);
     long fSize = getFileSize(fReader);
 
     while (fSize > 0) {
-        char *message;
-        char *cleanedMessage;
-        char *digraphedMessage;
-        char *encodedMessage;
+        char *message, *cleanedMessage, *digraphedMessage, *fixedDigraphedMessage, *encodedMessage;
+        long nChar = (BUFFER < fSize) ? BUFFER : fSize;
 
-        if (BUFFER < fSize) {
-            message = loadMessage(fReader, BUFFER);
+        message = loadMessage(fReader, nChar);
 
-            fSize -= BUFFER;
+        fSize -= nChar;
 
-            cleanedMessage = cleanMessage(message);
-            free(message);
+        cleanedMessage = toAlphaString(message);
+        free(message);
 
-            toUpperString(cleanedMessage);
+        toUpperString(cleanedMessage);
 
-            digraphedMessage = digraphMessage(cleanedMessage, key.specialChar);
-            free(cleanedMessage);
+        digraphedMessage = digraphMessage(cleanedMessage, key.specialChar);
+        free(cleanedMessage);
 
-            char *fixedDigraphedMessage = fixDigraphedMessage(fReader, digraphedMessage, key.specialChar, &fSize);
+        if (strlen(digraphedMessage) % 2 != 0) {
+            fixedDigraphedMessage = fixDigraphedMessage(fReader, digraphedMessage, key.specialChar, &fSize);
             free(digraphedMessage);
 
             encodedMessage = encodeMessage(fixedDigraphedMessage, matrix);
             free(fixedDigraphedMessage);
-
-            saveMessage(encodedMessage, outputDir, messageDir, ".pf");
-
-            free(encodedMessage);
         } else {
-            message = loadMessage(fReader, fSize);
-
-            fSize -= fSize;
-
-            cleanedMessage = cleanMessage(message);
-            free(message);
-
-            toUpperString(cleanedMessage);
-
-            digraphedMessage = digraphMessage(cleanedMessage, key.specialChar);
-            free(cleanedMessage);
-
             encodedMessage = encodeMessage(digraphedMessage, matrix);
             free(digraphedMessage);
-
-            saveMessage(encodedMessage, outputDir, messageDir, ".pf");
-
-            free(encodedMessage);
         }
+
+        saveMessage(encodedMessage, outputDir, messageDir, ".pf");
+
+        free(encodedMessage);
     }
 
     fclose(fReader);
 }
 
 void decode(Key key, char matrix[5][5], char *outputDir, char *messageDir) {
-    FILE *fReader = openFile(messageDir);
+    FILE *fReader = openFileToRead(messageDir);
     long fSize = getFileSize(fReader);
 
     while (fSize > 0) {
-        char *message;
-        char *cleanedMessage;
-        char *decodedMessage;
-        char *fixedMessage;
+        char *message, *cleanedMessage, *decodedMessage, *fixedMessage;
+        long nChar = (BUFFER < fSize) ? BUFFER : fSize;
 
-        if (BUFFER < fSize) {
-            message = loadMessage(fReader, BUFFER);
+        message = loadMessage(fReader, nChar);
+
+        if (nChar == BUFFER) {
+            fSize -= nChar + 1;
             fgetc(fReader);
+        } else
+            fSize -= nChar;
 
-            fSize -= BUFFER + 1;
+        cleanedMessage = removeCharFromString(' ', message);
+        free(message);
 
-            cleanedMessage = removeCharFromMessage(' ', message);
-            free(message);
+        decodedMessage = decodeMessage(cleanedMessage, matrix);
+        free(cleanedMessage);
 
-            decodedMessage = decodeMessage(cleanedMessage, matrix);
-            free(cleanedMessage);
+        fixedMessage = removeCharFromString(key.specialChar, decodedMessage);
+        free(decodedMessage);
 
-            fixedMessage = removeCharFromMessage(key.specialChar, decodedMessage);
-            free(decodedMessage);
+        saveMessage(fixedMessage, outputDir, messageDir, ".dec");
 
-            saveMessage(fixedMessage, outputDir, messageDir, ".dec");
-
-            free(fixedMessage);
-        } else {
-            message = loadMessage(fReader, fSize);
-
-            fSize -= fSize;
-
-            cleanedMessage = removeCharFromMessage(' ', message);
-            free(message);
-
-            decodedMessage = decodeMessage(cleanedMessage, matrix);
-            free(cleanedMessage);
-
-            fixedMessage = removeCharFromMessage(key.specialChar, decodedMessage);
-            free(decodedMessage);
-
-            saveMessage(fixedMessage, outputDir, messageDir, ".dec");
-
-            free(fixedMessage);
-        }
+        free(fixedMessage);
     }
 
     fclose(fReader);

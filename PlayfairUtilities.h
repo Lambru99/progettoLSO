@@ -5,6 +5,8 @@
 #ifndef PROGETTOLSO_PLAYFAIRUTILITIES_H
 #define PROGETTOLSO_PLAYFAIRUTILITIES_H
 
+#include <stdio.h>
+
 #include "KeyStruct.h"
 
 typedef struct {
@@ -13,12 +15,6 @@ typedef struct {
 } Coordinates;
 
 void fillMatrix(char [5][5], Key);
-
-void toUpperString(char *);
-
-char *removeCharFromMessage(char, char *);
-
-char *cleanMessage(char *);
 
 char *digraphMessage(char *, char);
 

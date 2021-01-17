@@ -4,28 +4,40 @@
 CMakeFiles/progettoLSO.dir/FileManager.c.obj: ../FileManager.c
 CMakeFiles/progettoLSO.dir/FileManager.c.obj: ../FileManager.h
 
+CMakeFiles/progettoLSO.dir/FileReader.c.obj: ../FileManager.h
 CMakeFiles/progettoLSO.dir/FileReader.c.obj: ../FileReader.c
 CMakeFiles/progettoLSO.dir/FileReader.c.obj: ../FileReader.h
 CMakeFiles/progettoLSO.dir/FileReader.c.obj: ../KeyStruct.h
+CMakeFiles/progettoLSO.dir/FileReader.c.obj: ../StringManager.h
 
+CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../FileManager.h
+CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../FileReader.h
 CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../FileWriter.c
 CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../FileWriter.h
+CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../KeyStruct.h
+CMakeFiles/progettoLSO.dir/FileWriter.c.obj: ../StringManager.h
 
+CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../FileManager.h
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../FileReader.h
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../FileWriter.h
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../KeyStruct.h
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../PlayfairCipher.c
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../PlayfairCipher.h
 CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../PlayfairUtilities.h
+CMakeFiles/progettoLSO.dir/PlayfairCipher.c.obj: ../StringManager.h
 
 CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj: ../KeyStruct.h
 CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj: ../PlayfairUtilities.c
 CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj: ../PlayfairUtilities.h
+CMakeFiles/progettoLSO.dir/PlayfairUtilities.c.obj: ../StringManager.h
+
+CMakeFiles/progettoLSO.dir/StringManager.c.obj: ../StringManager.c
+CMakeFiles/progettoLSO.dir/StringManager.c.obj: ../StringManager.h
 
 CMakeFiles/progettoLSO.dir/main.c.obj: ../FileReader.h
-CMakeFiles/progettoLSO.dir/main.c.obj: ../FileWriter.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../KeyStruct.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../PlayfairCipher.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../PlayfairUtilities.h
+CMakeFiles/progettoLSO.dir/main.c.obj: ../StringManager.h
 CMakeFiles/progettoLSO.dir/main.c.obj: ../main.c
 
